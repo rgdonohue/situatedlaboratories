@@ -37,3 +37,10 @@ const { title, description } = Astro.props;
     <CrisisFooter />
   </body>
 </html>
+
+<style is:global>
+  body {
+    background-image: var(--texture-paper), var(--texture-canvas);
+    background-blend-mode: overlay, multiply;
+  }
+</style>

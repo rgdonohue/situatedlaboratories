@@ -63,8 +63,11 @@ const featuredPractice = practices
       <div class="grid-3">
         <div class="pillar-card">
           <div class="pillar-icon">
+            <!-- Field Notes: Leaf with text lines (organic meets writing) -->
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M6 8h20M6 16h20M6 24h14" stroke="var(--color-rust)" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 4C16 4 8 8 6 16C4 24 10 28 16 28C22 28 28 24 26 16C24 8 16 4 16 4Z" stroke="var(--color-forest)" stroke-width="1.5" fill="var(--color-forest)" fill-opacity="0.1"/>
+              <path d="M16 4L16 28" stroke="var(--color-forest)" stroke-width="1.5"/>
+              <path d="M10 12h6M10 16h8M10 20h7" stroke="var(--color-rust)" stroke-width="1.2" stroke-linecap="round"/>
             </svg>
           </div>
           <h3>Field Notes</h3>
@@ -73,9 +76,16 @@ const featuredPractice = practices
         </div>
         <div class="pillar-card">
           <div class="pillar-icon">
+            <!-- Practice Lab: Neural pathway / branching river -->
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <circle cx="16" cy="16" r="8" stroke="var(--color-rust)" stroke-width="2"/>
-              <circle cx="16" cy="16" r="3" fill="var(--color-rust)"/>
+              <circle cx="16" cy="6" r="2.5" fill="var(--color-teal)"/>
+              <path d="M16 8.5L16 14" stroke="var(--color-teal)" stroke-width="2"/>
+              <circle cx="10" cy="20" r="2" fill="var(--color-teal-light)"/>
+              <circle cx="22" cy="20" r="2" fill="var(--color-teal-light)"/>
+              <circle cx="10" cy="27" r="1.5" fill="var(--color-teal-dark)"/>
+              <circle cx="16" cy="27" r="1.5" fill="var(--color-teal-dark)"/>
+              <circle cx="22" cy="27" r="1.5" fill="var(--color-teal-dark)"/>
+              <path d="M16 14C16 14 12 16 10 20M16 14C16 14 20 16 22 20M10 22L10 25M16 20L16 25M22 22L22 25" stroke="var(--color-teal)" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
           <h3>Practice Lab</h3>
@@ -84,9 +94,15 @@ const featuredPractice = practices
         </div>
         <div class="pillar-card">
           <div class="pillar-icon">
+            <!-- Study: Constellation forming geometric shape -->
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect x="8" y="6" width="16" height="20" stroke="var(--color-rust)" stroke-width="2"/>
-              <path d="M12 12h8M12 16h8M12 20h6" stroke="var(--color-rust)" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="6" r="1.5" fill="var(--color-cosmos)"/>
+              <circle cx="8" cy="14" r="1.5" fill="var(--color-cosmos)"/>
+              <circle cx="24" cy="14" r="1.5" fill="var(--color-cosmos)"/>
+              <circle cx="10" cy="26" r="1.5" fill="var(--color-cosmos)"/>
+              <circle cx="22" cy="26" r="1.5" fill="var(--color-cosmos)"/>
+              <circle cx="16" cy="20" r="2" fill="var(--color-rust)"/>
+              <path d="M16 6L8 14M16 6L24 14M8 14L10 26M24 14L22 26M10 26L16 20M22 26L16 20M8 14L16 20M24 14L16 20" stroke="var(--color-cosmos)" stroke-width="0.8" opacity="0.4"/>
             </svg>
           </div>
           <h3>Study</h3>
@@ -208,31 +224,31 @@ const featuredPractice = practices
   }
 
   .btn-primary {
-    background: var(--color-teal);
+    background: var(--color-forest);
     color: var(--color-paper);
     font-weight: 600;
-    box-shadow: 0 2px 4px rgba(30, 92, 87, 0.2);
+    box-shadow: 0 2px 8px rgba(45, 80, 22, 0.25);
   }
 
   .btn-primary:hover {
-    background: var(--color-teal-light);
+    background: var(--color-forest-light);
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(30, 92, 87, 0.3);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.35);
     transform: translateY(-1px);
   }
 
   .btn-secondary {
     background: transparent;
-    color: var(--color-teal);
-    border: 2px solid var(--color-teal);
+    color: var(--color-forest);
+    border: 2px solid var(--color-forest);
     font-weight: 500;
   }
 
   .btn-secondary:hover {
-    background: var(--color-teal);
+    background: var(--color-forest);
     color: var(--color-paper);
     text-decoration: none;
-    border-color: var(--color-teal-light);
+    border-color: var(--color-forest-light);
   }
 
 
@@ -247,12 +263,14 @@ const featuredPractice = practices
     border-radius: 8px;
     padding: var(--space-lg);
     background: var(--color-paper);
-    transition: var(--transition-base);
+    box-shadow: 0 1px 3px rgba(21, 21, 21, 0.08);
+    transition: all var(--transition-slow);
   }
 
   .pillar-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-teal);
+    transform: translateY(-3px);
+    border-color: var(--color-forest);
+    box-shadow: 0 8px 20px rgba(45, 80, 22, 0.15);
   }
 
   .pillar-icon {
@@ -349,10 +367,23 @@ const featuredPractice = practices
     color: var(--color-ink-secondary);
   }
 
-  /* Responsive */
+  /* Responsive Design */
   @media (max-width: 768px) {
     .hero {
       padding: var(--space-xl) 0;
+    }
+
+    .hero-overline {
+      font-size: 0.7rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .hero-description {
+      font-size: 1rem;
     }
 
     .hero-actions {
@@ -366,7 +397,27 @@ const featuredPractice = practices
 
     .hero-caption-integrated {
       padding-left: var(--space-sm);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+    }
+
+    .pillar-card {
+      padding: var(--space-md);
+    }
+
+    .quote-with-contour p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin: 0 auto;
     }
   }
 </style>
