@@ -44,14 +44,23 @@ const { Content } = await practice.render();
       </p>
     </header>
     
-    <div style="margin-bottom: var(--space-xl);">
-      <AudioPlayer 
-        src={practice.data.audioUrl}
-        title={practice.data.title}
-        transcript={practice.data.transcript}
-        duration={practice.data.duration}
-      />
-    </div>
+    {practice.data.audioUrl && (
+      <div style="margin-bottom: var(--space-xl);">
+        <AudioPlayer 
+          src={practice.data.audioUrl}
+          title={practice.data.title}
+          transcript={practice.data.transcript}
+          duration={practice.data.duration}
+        />
+      </div>
+    )}
+    
+    {!practice.data.audioUrl && (
+      <div style="margin-bottom: var(--space-xl); padding: var(--space-lg); background: var(--color-paper-dark); border-radius: 8px; border-left: 3px solid var(--color-forest);">
+        <h2 style="font-size: 1.1rem; margin-bottom: var(--space-sm);">Practice Instructions</h2>
+        <div class="transcript-content" set:html={practice.data.transcript} />
+      </div>
+    )}
     
     <div class="content">
       <Content />

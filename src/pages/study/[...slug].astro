@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const studyMaterials = await getCollection('study');
+  return studyMaterials.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: CollectionEntry<'study'>;
+}
+
+const { item } = Astro.props;
+const { Content } = await item.render();
+---
+
+<BaseLayout 
+  title={item.data.title} 
+  description={item.data.description}
+>
+  <article class="study-article">
+    <div class="container">
+      <header class="study-header">
+        <span class="study-category">{item.data.category}</span>
+        <h1>{item.data.title}</h1>
+      </header>
+      
+      <div class="content">
+        <Content />
+      </div>
+      
+      <footer class="study-footer">
+        <a href="/study">← Back to Study</a>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .study-article {
+    padding: var(--space-2xl) 0;
+  }
+
+  .study-article .container {
+    max-width: 700px;
+  }
+
+  .study-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .study-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-forest);
+    color: var(--color-paper);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    margin-bottom: var(--space-sm);
+  }
+
+  .study-footer {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Content styles */
+  .content {
+    line-height: 1.8;
+  }
+
+  .content h2 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .content h3 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content p {
+    margin-bottom: var(--space-md);
+  }
+
+  .content ul,
+  .content ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+  }
+
+  .content li {
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .study-article {
+      padding: var(--space-xl) 0;
+    }
+  }
+</style>
+

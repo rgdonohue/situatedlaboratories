@@ -19,8 +19,8 @@ const practices = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    audioUrl: z.string(), // Path relative to /public/audio/
-    transcript: z.string(), // Markdown content for transcript
+    audioUrl: z.string().optional(), // Path relative to /public/audio/ (optional for text-only practices)
+    transcript: z.string(), // Markdown content for transcript/instructions
     duration: z.string(), // Format: "5:12"
     pubDate: z.date(),
     featured: z.boolean().default(false),

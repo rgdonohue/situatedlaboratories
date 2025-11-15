@@ -23,8 +23,8 @@ const featuredPractice = practices
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-content">
+    <div class="hero-container">
+      <div class="hero-split">
         <div class="hero-text">
           <p class="hero-overline">YOGA · DHARMA · SOCIAL JUSTICE</p>
           <h1>Yoga, dharma & social justice practice for a burning world.</h1>
@@ -52,7 +52,9 @@ const featuredPractice = practices
             )}
           </div>
         </div>
-        <!-- Hero visual removed - integrated into main text flow for better hierarchy -->
+        <div class="hero-image">
+          <img src="/images/hero.png" alt="Organic complexity: nature and technology intertwined" />
+        </div>
       </div>
     </div>
   </section>
@@ -175,8 +177,33 @@ const featuredPractice = practices
     padding: var(--space-2xl) 0;
   }
 
-  .hero-content {
-    max-width: 800px;
+  .hero-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0.9;
   }
 
   .hero-overline {
@@ -368,6 +395,21 @@ const featuredPractice = practices
   }
 
   /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero-split {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+  }
+
   @media (max-width: 768px) {
     .hero {
       padding: var(--space-xl) 0;
