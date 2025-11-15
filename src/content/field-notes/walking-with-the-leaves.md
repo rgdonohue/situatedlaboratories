@@ -28,8 +28,6 @@ This is where the teaching gets uncomfortable.
 
 Because when I'm honest about impermanence, I have to face death. Not as an abstract concept, but as a reality. My death. The death of people I love. The death of species, ecosystems, ways of life. The honeycomb on the trail—was it abandoned because the colony collapsed? Because of pesticides, habitat loss, the same forces that are unraveling so much? The climate crisis is making this visible on a scale that's hard to bear. The patterns I've relied on—that fall follows summer, that grass turns and falls—are becoming less reliable.
 
-<img src="/images/field-notes/sage-trail.jpg" alt="Sage in autumn fields" />
-
 Buddhist teachings on death aren't meant to be comforting in the way we might want. They're meant to be clarifying. The Buddha taught that contemplating death is essential to awakening. Not because death is something to fear or avoid, but because understanding that this body, this life, this moment is temporary changes how we live. It can cut through the delusion that we have unlimited time, unlimited resources, unlimited capacity to avoid what's difficult.
 
 Walking with the honeycomb, with the orange grass, with the sage holding on in the fields, I'm practicing with this. Not trying to make it okay, not trying to spiritualize it away, but just being present to what is: the beauty and the loss, the turning and the falling, the impermanence of it all.
