@@ -490,7 +490,7 @@ This practice helps ground your nervous system before engaging with difficult ne
 1. **Transfer:** AirDrop photos from iPhone to Mac
 2. **Convert & Optimize:**
    ```bash
-   # Convert HEIF to JPEG and resize to 1600px width
+   # Convert HEIF to JPEG and resize to 1600px on longest side (works for portrait & landscape)
    sips -s format jpeg -s formatOptions 85 -Z 1600 input.HEIC --out output.jpg
    
    # Move to project
@@ -505,7 +505,7 @@ This practice helps ground your nervous system before engaging with difficult ne
 ### Image Specs
 
 - **Format:** JPEG for photos (not PNG, not HEIF)
-- **Max width:** 1600px (maintains aspect ratio)
+- **Max dimension:** 1600px on longest side (maintains aspect ratio - works for both portrait and landscape)
 - **Quality:** 85% (good balance of quality/file size)
 - **Target file size:** < 1MB per image
 - **Alt text:** Descriptive and specific
