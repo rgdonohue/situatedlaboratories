@@ -39,8 +39,19 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
+  html {
+    height: 100%;
+  }
+
   body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     background-image: var(--texture-paper), var(--texture-canvas);
     background-blend-mode: overlay, multiply;
+  }
+
+  #main-content {
+    flex: 1;
   }
 </style>
