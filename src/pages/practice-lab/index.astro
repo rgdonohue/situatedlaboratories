@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const practices = await getCollection('practices').catch(() => []);
+const sortedPractices = practices.sort((a, b) => 
+  b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+---
+
+<BaseLayout 
+  title="Practice Lab" 
+  description="Simple practices for nervous systems under pressure."
+>
+  <article class="container" style="padding: var(--space-2xl) 0;">
+    <h1>Practice Lab</h1>
+    <p style="font-size: 1.1rem; color: var(--color-ink-secondary); margin-bottom: var(--space-xl);">
+      Simple, low-production practices that support readers of the essays.
+    </p>
+    
+    {sortedPractices.length > 0 ? (
+      <div class="practices-list">
+        {sortedPractices.map((practice) => (
+          <article class="practice-card">
+            <div class="practice-meta">
+              <time datetime={practice.data.pubDate.toISOString()}>
+                {practice.data.pubDate.toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+              <span class="duration">{practice.data.duration}</span>
+            </div>
+            <h2><a href={`/practice-lab/${practice.slug}`}>{practice.data.title}</a></h2>
+            <p>{practice.data.description}</p>
+            <a href={`/practice-lab/${practice.slug}`} class="read-more">Listen →</a>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p style="color: var(--color-ink-secondary);">
+        Practices coming soon. Check back as audio practices are added.
+      </p>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .practices-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .practice-card {
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .practice-card:last-child {
+    border-bottom: none;
+  }
+
+  .practice-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .practice-meta time {
+    font-size: 0.9rem;
+    color: var(--color-ink-secondary);
+  }
+
+  .duration {
+    font-size: 0.9rem;
+    color: var(--color-teal);
+    font-weight: 500;
+  }
+
+  .practice-card h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .practice-card h2 a {
+    color: var(--color-ink);
+  }
+
+  .practice-card h2 a:hover {
+    color: var(--color-teal);
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-weight: 500;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const fieldNotes = await getCollection('field-notes');
+  return fieldNotes.map((note) => ({
+    params: { slug: note.slug },
+    props: { note },
+  }));
+}
+
+interface Props {
+  note: CollectionEntry<'field-notes'>;
+}
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+---
+
+<BaseLayout 
+  title={note.data.title} 
+  description={note.data.description}
+>
+  <article class="container" style="padding: var(--space-2xl) 0; max-width: 700px;">
+    <header style="margin-bottom: var(--space-xl);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: var(--space-sm);">
+        <time datetime={note.data.pubDate.toISOString()} style="font-size: 0.9rem; color: var(--color-ink-secondary);">
+          {note.data.pubDate.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </time>
+        {note.data.tags && note.data.tags.length > 0 && (
+          <div style="display: flex; gap: var(--space-xs); flex-wrap: wrap;">
+            {note.data.tags.map((tag) => (
+              <span style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: var(--color-paper-dark); color: var(--color-ink-secondary); border-radius: 4px;">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+      <h1>{note.data.title}</h1>
+      <p style="font-size: 1.1rem; color: var(--color-ink-secondary); margin-top: var(--space-sm);">
+        {note.data.description}
+      </p>
+    </header>
+    
+    <div class="content">
+      <Content />
+    </div>
+    
+    <footer style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+      <a href="/field-notes">← Back to Field Notes</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .content {
+    line-height: 1.8;
+  }
+
+  .content h2 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .content h3 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content p {
+    margin-bottom: var(--space-md);
+  }
+
+  .content ul,
+  .content ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+  }
+
+  .content li {
+    margin-bottom: var(--space-xs);
+  }
+</style>

@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const fieldNotes = await getCollection('field-notes').catch(() => []);
+const sortedNotes = fieldNotes.sort((a, b) => 
+  b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+---
+
+<BaseLayout 
+  title="Field Notes" 
+  description="Essays on suffering, systems, and the path."
+>
+  <article class="container" style="padding: var(--space-2xl) 0;">
+    <h1>Field Notes</h1>
+    <p style="font-size: 1.1rem; color: var(--color-ink-secondary); margin-bottom: var(--space-xl);">
+      Essays and short reflections on suffering, systems, and the path.
+    </p>
+    
+    {sortedNotes.length > 0 ? (
+      <div class="notes-list">
+        {sortedNotes.map((note) => (
+          <article class="note-card">
+            <div class="note-meta">
+              <time datetime={note.data.pubDate.toISOString()}>
+                {note.data.pubDate.toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+              {note.data.tags && note.data.tags.length > 0 && (
+                <div class="note-tags">
+                  {note.data.tags.map((tag) => (
+                    <span class="tag-small">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <h2><a href={`/field-notes/${note.slug}`}>{note.data.title}</a></h2>
+            <p>{note.data.description}</p>
+            <a href={`/field-notes/${note.slug}`} class="read-more">Read essay →</a>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p style="color: var(--color-ink-secondary);">
+        Field Notes coming soon. Check back as essays are published.
+      </p>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .note-card {
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .note-card:last-child {
+    border-bottom: none;
+  }
+
+  .note-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .note-meta time {
+    font-size: 0.9rem;
+    color: var(--color-ink-secondary);
+  }
+
+  .note-tags {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag-small {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-paper-dark);
+    color: var(--color-ink-secondary);
+    border-radius: 4px;
+  }
+
+  .note-card h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .note-card h2 a {
+    color: var(--color-ink);
+  }
+
+  .note-card h2 a:hover {
+    color: var(--color-teal);
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-weight: 500;
+  }
+</style>

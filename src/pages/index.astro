@@ -1,0 +1,372 @@
+---
+// index.astro - Home page from DESIGN_PLAN.md
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+
+// Get featured content
+const fieldNotes = await getCollection('field-notes').catch(() => []);
+const practices = await getCollection('practices').catch(() => []);
+
+const featuredEssay = fieldNotes
+  .filter(note => note.data.featured)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())[0];
+
+const featuredPractice = practices
+  .filter(practice => practice.data.featured)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())[0];
+---
+
+<BaseLayout 
+  title="Yoga, Dharma & Social Justice Practice" 
+  description="Experiments in liberation for a burning world."
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-overline">YOGA · DHARMA · SOCIAL JUSTICE</p>
+          <h1>Yoga, dharma & social justice practice for a burning world.</h1>
+          <p class="hero-description">
+            Situated Laboratories is a home for practice, study, and experiment at the intersection of Buddhist insight, Ashtanga yoga, and collective liberation.
+          </p>
+          <p class="hero-caption-integrated">
+            <em>Every mind is a situated laboratory. We practice with the conditions we've got.</em>
+          </p>
+          <div class="hero-actions">
+            {featuredEssay && (
+              <a href={`/field-notes/${featuredEssay.slug}`} class="btn btn-primary">
+                Read the latest Field Note
+              </a>
+            )}
+            {featuredPractice && (
+              <a href={`/practice-lab/${featuredPractice.slug}`} class="btn btn-secondary">
+                Try a 5-minute practice
+              </a>
+            )}
+            {!featuredEssay && !featuredPractice && (
+              <a href="/field-notes" class="btn btn-primary">
+                Explore Field Notes
+              </a>
+            )}
+          </div>
+        </div>
+        <!-- Hero visual removed - integrated into main text flow for better hierarchy -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Pillar Tiles -->
+  <section class="pillars">
+    <div class="container">
+      <div class="grid-3">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M6 8h20M6 16h20M6 24h14" stroke="var(--color-rust)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Field Notes</h3>
+          <p>Essays on suffering, systems, and the path.</p>
+          <a href="/field-notes" class="pillar-link">Explore →</a>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="8" stroke="var(--color-rust)" stroke-width="2"/>
+              <circle cx="16" cy="16" r="3" fill="var(--color-rust)"/>
+            </svg>
+          </div>
+          <h3>Practice Lab</h3>
+          <p>Simple practices for nervous systems under pressure.</p>
+          <a href="/practice-lab" class="pillar-link">Explore →</a>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="8" y="6" width="16" height="20" stroke="var(--color-rust)" stroke-width="2"/>
+              <path d="M12 12h8M12 16h8M12 20h6" stroke="var(--color-rust)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Study</h3>
+          <p>Friendly guides to sutras, suttas, and ethics in context.</p>
+          <a href="/study" class="pillar-link">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Content (60/40 split) -->
+  {(featuredEssay || featuredPractice) && (
+    <section class="featured">
+      <div class="container">
+        <div class="split-asymmetric">
+          {featuredEssay && (
+            <div class="featured-essay">
+              <span class="tag">Field Note</span>
+              <h2>{featuredEssay.data.title}</h2>
+              <p>{featuredEssay.data.description}</p>
+              <a href={`/field-notes/${featuredEssay.slug}`}>Read this essay →</a>
+            </div>
+          )}
+          {featuredPractice && (
+            <div class="featured-practice">
+              <span class="tag">Practice</span>
+              <h3>{featuredPractice.data.title}</h3>
+              <p>{featuredPractice.data.description}</p>
+              <a href={`/practice-lab/${featuredPractice.slug}`}>
+                Listen ({featuredPractice.data.duration})
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Quote Block -->
+  <section class="quote-block">
+    <div class="container">
+      <blockquote class="quote-with-contour">
+        <p>"Freedom is not found by escaping conditions, but by seeing clearly how we are conditioned — and responding with wisdom instead of habit."</p>
+        <cite class="quote-attribution">— Situated Laboratories</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- About Strip -->
+  <section class="about-strip">
+    <div class="container">
+      <p>
+        Situated Laboratories is run by Richard Donohue, a geographer, ex-professor, and dharma and yoga practitioner with a justice-oriented orientation.
+      </p>
+      <a href="/about">Learn more →</a>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-strip">
+    <div class="container">
+      <NewsletterSignup />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero styles */
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-overline {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-rust);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-ink-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-caption-integrated {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--color-ink-secondary);
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--color-rust);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 4px;
+    font-weight: 500;
+    transition: var(--transition-base);
+  }
+
+  .btn-primary {
+    background: var(--color-teal);
+    color: var(--color-paper);
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(30, 92, 87, 0.2);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-teal-light);
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(30, 92, 87, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-teal);
+    border: 2px solid var(--color-teal);
+    font-weight: 500;
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-teal);
+    color: var(--color-paper);
+    text-decoration: none;
+    border-color: var(--color-teal-light);
+  }
+
+
+  /* Pillar tiles */
+  .pillars {
+    padding: var(--space-2xl) 0;
+    background: var(--color-paper-dark);
+  }
+
+  .pillar-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-lg);
+    background: var(--color-paper);
+    transition: var(--transition-base);
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-teal);
+  }
+
+  .pillar-icon {
+    margin-bottom: var(--space-md);
+    color: var(--color-rust);
+  }
+
+  .pillar-icon svg {
+    display: block;
+  }
+
+  .pillar-link {
+    font-weight: 500;
+    color: var(--color-teal);
+  }
+
+  .pillar-link:hover {
+    color: var(--color-teal-light);
+  }
+
+  .pillar-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .pillar-card p {
+    color: var(--color-ink-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Featured content */
+  .featured {
+    padding: var(--space-2xl) 0;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-rust);
+    color: var(--color-paper);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    margin-bottom: var(--space-sm);
+  }
+
+  .featured-essay h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .featured-practice h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Quote block */
+  .quote-block {
+    padding: var(--space-2xl) 0;
+    background: var(--color-paper-dark);
+  }
+
+  .quote-with-contour {
+    border-left: 3px solid var(--color-rust);
+    padding-left: var(--space-md);
+    margin: 0;
+  }
+
+  .quote-with-contour p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+  }
+
+  .quote-attribution {
+    display: block;
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-ink-secondary);
+    margin-top: var(--space-sm);
+    font-variant: normal;
+    letter-spacing: normal;
+  }
+
+  /* About strip */
+  .about-strip {
+    padding: var(--space-xl) 0;
+    text-align: center;
+  }
+
+  .about-strip p {
+    max-width: 600px;
+    margin: 0 auto var(--space-md);
+    color: var(--color-ink-secondary);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--space-xl) 0;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-caption-integrated {
+      padding-left: var(--space-sm);
+      font-size: 0.95rem;
+    }
+  }
+</style>

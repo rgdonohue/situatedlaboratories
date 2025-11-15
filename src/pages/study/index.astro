@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const studyMaterials = await getCollection('study').catch(() => []);
+const sortedStudy = studyMaterials.sort((a, b) => {
+  const orderA = a.data.order ?? 999;
+  const orderB = b.data.order ?? 999;
+  return orderA - orderB;
+});
+---
+
+<BaseLayout 
+  title="Study" 
+  description="Friendly guides to sutras, suttas, and ethics in context."
+>
+  <article class="container" style="padding: var(--space-2xl) 0;">
+    <h1>Study</h1>
+    
+    <p>
+      These materials offer plain-language introductions to core teachings, framed in the context of contemporary life — jobs, phones, climate crisis, structural harm. They're starting points, not comprehensive guides.
+    </p>
+    
+    {sortedStudy.length > 0 ? (
+      <div style="margin-top: var(--space-xl);">
+        {sortedStudy.map((item) => (
+          <article style="margin-bottom: var(--space-xl); padding-bottom: var(--space-lg); border-bottom: 1px solid var(--color-border);">
+            <h2>{item.data.title}</h2>
+            <p>{item.data.description}</p>
+            <a href={`/study/${item.slug}`}>Read more →</a>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p style="margin-top: var(--space-xl); color: var(--color-ink-secondary);">
+        Study materials coming soon. Check back as content is added.
+      </p>
+    )}
+  </article>
+</BaseLayout>

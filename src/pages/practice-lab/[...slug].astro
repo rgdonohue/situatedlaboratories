@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AudioPlayer from '../../components/AudioPlayer.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const practices = await getCollection('practices');
+  return practices.map((practice) => ({
+    params: { slug: practice.slug },
+    props: { practice },
+  }));
+}
+
+interface Props {
+  practice: CollectionEntry<'practices'>;
+}
+
+const { practice } = Astro.props;
+const { Content } = await practice.render();
+---
+
+<BaseLayout 
+  title={practice.data.title} 
+  description={practice.data.description}
+>
+  <article class="container" style="padding: var(--space-2xl) 0; max-width: 700px;">
+    <header style="margin-bottom: var(--space-xl);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: var(--space-sm);">
+        <time datetime={practice.data.pubDate.toISOString()} style="font-size: 0.9rem; color: var(--color-ink-secondary);">
+          {practice.data.pubDate.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </time>
+        <span style="font-size: 0.9rem; color: var(--color-teal); font-weight: 500;">
+          {practice.data.duration}
+        </span>
+      </div>
+      <h1>{practice.data.title}</h1>
+      <p style="font-size: 1.1rem; color: var(--color-ink-secondary); margin-top: var(--space-sm);">
+        {practice.data.description}
+      </p>
+    </header>
+    
+    <div style="margin-bottom: var(--space-xl);">
+      <AudioPlayer 
+        src={practice.data.audioUrl}
+        title={practice.data.title}
+        transcript={practice.data.transcript}
+        duration={practice.data.duration}
+      />
+    </div>
+    
+    <div class="content">
+      <Content />
+    </div>
+    
+    <footer style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+      <a href="/practice-lab">← Back to Practice Lab</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .content {
+    line-height: 1.8;
+  }
+
+  .content h2 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .content h3 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content p {
+    margin-bottom: var(--space-md);
+  }
+</style>
