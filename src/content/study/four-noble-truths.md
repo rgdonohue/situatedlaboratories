@@ -5,8 +5,6 @@ category: dharma
 order: 1
 ---
 
-# The Four Noble Truths
-
 The Four Noble Truths are the foundation of Buddhist teaching. They're not abstract philosophy—they're a direct observation about how suffering works and how to work with it.
 
 ## The First Noble Truth: There is Suffering
