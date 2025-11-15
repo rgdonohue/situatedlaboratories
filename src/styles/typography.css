@@ -1,0 +1,67 @@
+/* Typography - from DESIGN_PLAN.md */
+
+/* Headlines */
+h1, h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 3vw, 3.3rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 2.5vw, 2rem);
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Body text */
+body {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-teal-light);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Quotes */
+blockquote {
+  font-style: italic;
+  border-left: 3px solid var(--color-rust);
+  padding-left: var(--space-md);
+  margin-left: 0;
+  margin-right: 0;
+  color: var(--color-ink-secondary);
+}
+
+/* Quote attribution - now handled inline in pages for better control */

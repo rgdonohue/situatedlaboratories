@@ -1,0 +1,39 @@
+/* Layout utilities */
+
+.container {
+  width: 100%;
+  max-width: var(--container-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+/* Grid utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+/* 60/40 split for hero and featured content */
+.split-asymmetric {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: var(--space-xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .split-asymmetric {
+    grid-template-columns: 1fr;
+  }
+}
