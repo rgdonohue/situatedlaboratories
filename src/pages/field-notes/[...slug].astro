@@ -104,35 +104,35 @@ const { Content } = await note.render();
   }
 
   /* Content styles */
-  .content {
+  :global(.post-article .content) {
     line-height: 1.8;
   }
 
-  .content h2 {
+  :global(.post-article .content h2) {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-md);
   }
 
-  .content h3 {
+  :global(.post-article .content h3) {
     margin-top: var(--space-lg);
     margin-bottom: var(--space-sm);
   }
 
-  .content p {
+  :global(.post-article .content p) {
     margin-bottom: var(--space-md);
   }
 
-  .content ul,
-  .content ol {
+  :global(.post-article .content ul),
+  :global(.post-article .content ol) {
     margin-bottom: var(--space-md);
     padding-left: var(--space-lg);
   }
 
-  .content li {
+  :global(.post-article .content li) {
     margin-bottom: var(--space-xs);
   }
 
-  .content img {
+  :global(.post-article .content img) {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -149,7 +149,7 @@ const { Content } = await note.render();
       padding: var(--space-xl) 0;
     }
 
-    .content img {
+    :global(.post-article .content img) {
       margin-top: 3rem !important;
       margin-bottom: 4rem !important;
       border-radius: 6px;
