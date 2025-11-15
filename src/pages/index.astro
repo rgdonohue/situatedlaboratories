@@ -23,37 +23,35 @@ const featuredPractice = practices
 >
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-container">
-      <div class="hero-split">
-        <div class="hero-text">
-          <p class="hero-overline">YOGA · DHARMA · SOCIAL JUSTICE</p>
-          <h1>Yoga, dharma & social justice practice for a burning world.</h1>
-          <p class="hero-description">
-            Situated Laboratories is a home for practice, study, and experiment with Buddhist insight, Ashtanga yoga, and collective liberation.
-          </p>
-          <p class="hero-caption-integrated">
-            <em>Every mind is a situated laboratory. We practice with the conditions we've got.</em>
-          </p>
-          <div class="hero-actions">
-            {featuredEssay && (
-              <a href={`/field-notes/${featuredEssay.slug}`} class="btn btn-primary">
-                Read the latest Field Note
-              </a>
-            )}
-            {featuredPractice && (
-              <a href={`/practice-lab/${featuredPractice.slug}`} class="btn btn-secondary">
-                Try a 5-minute practice
-              </a>
-            )}
-            {!featuredEssay && !featuredPractice && (
-              <a href="/field-notes" class="btn btn-primary">
-                Explore Field Notes
-              </a>
-            )}
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="/images/hero.png" alt="Organic complexity: nature and technology intertwined" />
+      <div class="hero-content">
+        <p class="hero-overline">YOGA · DHARMA · SOCIAL JUSTICE</p>
+        <h1>Yoga, dharma & social justice practice for a burning world.</h1>
+        <p class="hero-description">
+          Situated Laboratories is a home for practice, study, and experiment with Buddhist insight, Ashtanga yoga, and collective liberation.
+        </p>
+        <p class="hero-caption-integrated">
+          <em>Every mind is a situated laboratory. We practice with the conditions we've got.</em>
+        </p>
+        <div class="hero-actions">
+          {featuredEssay && (
+            <a href={`/field-notes/${featuredEssay.slug}`} class="btn btn-primary">
+              Read the latest Field Note
+            </a>
+          )}
+          {featuredPractice && (
+            <a href={`/practice-lab/${featuredPractice.slug}`} class="btn btn-secondary">
+              Try a 5-minute practice
+            </a>
+          )}
+          {!featuredEssay && !featuredPractice && (
+            <a href="/field-notes" class="btn btn-primary">
+              Explore Field Notes
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -174,36 +172,48 @@ const featuredPractice = practices
 <style>
   /* Hero styles */
   .hero {
+    position: relative;
     padding: var(--space-2xl) 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(247, 243, 236, 0.85) 0%, rgba(247, 243, 236, 0.75) 100%);
+    z-index: 1;
   }
 
   .hero-container {
+    position: relative;
+    z-index: 2;
     width: 100%;
-    max-width: 1400px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 var(--space-md);
   }
 
-  .hero-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-2xl);
-    align-items: center;
-  }
-
-  .hero-text {
-    max-width: 600px;
-  }
-
-  .hero-image {
-    position: relative;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    opacity: 0.9;
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero-overline {
@@ -395,24 +405,14 @@ const featuredPractice = practices
   }
 
   /* Responsive Design */
-  @media (max-width: 1024px) {
-    .hero-split {
-      grid-template-columns: 1fr;
-      gap: var(--space-xl);
-    }
-
-    .hero-image {
-      order: -1;
-    }
-
-    .hero-text {
-      max-width: 100%;
-    }
-  }
-
   @media (max-width: 768px) {
     .hero {
       padding: var(--space-xl) 0;
+      min-height: 50vh;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(247, 243, 236, 0.9) 0%, rgba(247, 243, 236, 0.8) 100%);
     }
 
     .hero-overline {
