@@ -3,7 +3,7 @@
 **Yoga, Dharma & Social Justice Practice**  
 *Experiments in liberation for a burning world.*
 
-A practice-centered laboratory for integrating Buddhist insight, Ashtanga yoga, and collective liberation. Essays, study guides, and simple practices for people navigating burnout, climate grief, political anxiety, and everyday suffering — without gurus, spiritual bypass, or toxic positivity.
+A place for Buddhist insight, Ashtanga yoga, and collective liberation. Essays, study guides, and simple practices for people dealing with burnout, climate grief, political anxiety, and everyday suffering — without gurus, spiritual bypass, or toxic positivity.
 
 ![situated laboratories](sl.png)
 
@@ -11,13 +11,13 @@ A practice-centered laboratory for integrating Buddhist insight, Ashtanga yoga, 
 
 ## What This Is
 
-Situated Laboratories is a home for practice, study, and experiment at the intersection of Buddhist insight, Ashtanga yoga, and collective liberation. It offers:
+Situated Laboratories is a home for practice, study, and experiment with Buddhist insight, Ashtanga yoga, and collective liberation. It offers:
 
 - **Field Notes** — Essays on suffering, systems, and the path
 - **Practice Lab** — Simple audio practices for nervous systems under pressure
 - **Study** — Friendly guides to sutras, suttas, and ethics in context
 
-Each life is a site-specific experiment in liberation. Practices are tested in real conditions — insomnia, grief, burnout, solidarity work — and refined with honesty rather than perfectionism.
+Each life is an experiment in liberation. Practices are tested in real conditions — insomnia, grief, burnout, solidarity work — and refined honestly.
 
 ---
 
@@ -25,7 +25,7 @@ Each life is a site-specific experiment in liberation. Practices are tested in r
 
 ### Grounded Practice
 
-Short, realistic practices that people can integrate into daily life, not aspirational retreats. Practices acknowledge systemic causes of burnout, not just "self-care."
+Short, realistic practices for daily life, not aspirational retreats. Practices acknowledge systemic causes of burnout, not just "self-care."
 
 ### Integration of Dharma, Yoga, and Justice
 
@@ -37,7 +37,7 @@ How the Four Noble Truths, the Eightfold Path, and the eight limbs of yoga speak
 
 ### Honest Stories
 
-Essays and reflections that name power and systems (capitalism, white supremacy, digital fascism) while continually returning to: *What does this mean for practice in a nervous system and a body?*
+Essays and reflections that name power and systems (capitalism, white supremacy, digital fascism) while always coming back to: *What does this mean for practice in a nervous system and a body?*
 
 ### Accessibility & Justice
 
@@ -63,7 +63,7 @@ If you are in immediate distress, please contact local emergency services or a c
 
 ## Boundaries & Ethics
 
-Material may touch on trauma, grief, and substance use, but it is not therapy or medical advice. Readers are encouraged to seek licensed therapists, medical providers, or crisis resources when needed.
+Material may touch on trauma, grief, and substance use, but it is not therapy or medical advice. Please seek licensed therapists, medical providers, or crisis resources when needed.
 
 This work is offered freely. If you find it helpful and are resourced, you're invited to support it through dana (generosity), but this is not required — all content remains freely accessible.
 
@@ -103,9 +103,7 @@ This is a guideline, not a requirement. Adjustments happen based on capacity and
 
 ## Support
 
-If you find this work helpful and are resourced, you're invited to support it through dana (generosity). See the Support page for more information.
-
-For questions, suggestions, or to report issues, please use the contact information on the Support page.
+If you find this helpful and can afford it, you're invited to support it through dana (generosity). See the Support page for more information.
 
 ---
 
