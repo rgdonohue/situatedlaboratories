@@ -481,4 +481,45 @@ This practice helps ground your nervous system before engaging with difficult ne
 
 ---
 
+## Working with Images
+
+### Image Workflow (iPhone/Mac)
+
+**For iPhone photos → web:**
+
+1. **Transfer:** AirDrop photos from iPhone to Mac
+2. **Convert & Optimize:**
+   ```bash
+   # Convert HEIF to JPEG and resize to 1600px width
+   sips -s format jpeg -s formatOptions 85 -Z 1600 input.HEIC --out output.jpg
+   
+   # Move to project
+   mv output.jpg public/images/field-notes/
+   ```
+
+3. **Add to markdown:**
+   ```html
+   <img src="/images/field-notes/image-name.jpg" alt="Descriptive alt text" />
+   ```
+
+### Image Specs
+
+- **Format:** JPEG for photos (not PNG, not HEIF)
+- **Max width:** 1600px (maintains aspect ratio)
+- **Quality:** 85% (good balance of quality/file size)
+- **Target file size:** < 1MB per image
+- **Alt text:** Descriptive and specific
+
+### Quick Reference
+
+```bash
+# Convert and optimize a single image
+sips -s format jpeg -s formatOptions 85 -Z 1600 input.HEIC --out output.jpg
+
+# Batch convert multiple images
+for f in *.HEIC; do sips -s format jpeg -s formatOptions 85 -Z 1600 "$f" --out "${f%.HEIC}.jpg"; done
+```
+
+---
+
 > "Content, like practice, should serve liberation — not become another thing to perfect."
