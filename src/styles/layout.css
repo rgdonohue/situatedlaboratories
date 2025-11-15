@@ -31,9 +31,21 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
   .grid-2,
   .grid-3,
   .split-asymmetric {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 }
