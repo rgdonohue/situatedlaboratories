@@ -111,7 +111,11 @@ For questions, suggestions, or to report issues, please use the contact informat
 
 ## License
 
-[Add your license here]
+This project is open source and available under the [MIT License](LICENSE).
+
+**Code:** MIT License - Feel free to use, modify, and distribute.
+
+**Content:** Essays, practices, and study materials are shared with generosity. Please attribute when sharing or adapting.
 
 ---
 
