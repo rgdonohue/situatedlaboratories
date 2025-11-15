@@ -8,13 +8,13 @@ featured: true
 
 I found a honeycomb on the trail today. Not in a tree, but on the ground, fallen. The hexagonal cells were empty, the wax structure still intact but abandoned. I knelt down to look at it, this perfect architecture that had been built, used, and then left behind. The bees were gone. The honey was gone. Only the form remained, sitting there on the dirt path like a question.
 
-<img src="/images/field-notes/honeycomb.png" alt="A fallen bee honeycomb on a trail" />
+<img src="/images/field-notes/honeycomb.jpg" alt="A fallen bee honeycomb on a trail" />
 
 I've been walking in the fall, practicing walking meditation on these trails. Not the formal kind with precise steps and counting, but the kind where you notice your feet on the ground, the breath in your body, the way the light changes as you move. The kind where you're present to what's actually happening, not trying to escape it.
 
 The grass has turned orange. Long, dry stalks that catch the light and hold it, standing in front of mountains that are still green but starting to show the shift. The sage is still there, silver-green in the same fields, holding its own against the change. But the grass—the grass has given itself over completely to the season.
 
-<img src="/images/field-notes/grass-mountains.png" alt="Orange grass in front of mountains" />
+<img src="/images/field-notes/grass-mountains.jpg" alt="Orange grass in front of mountains" />
 
 In Buddhist teachings, impermanence (anicca) is one of the three marks of existence. Everything that arises will pass away. This is not a metaphor or a philosophical point—it's a direct observation. The body ages. Relationships end. Seasons change. The grass that was green in spring is orange now, and by winter it will be gone, replaced by new growth waiting for the cycle to begin again.
 
@@ -28,7 +28,7 @@ This is where the teaching gets uncomfortable.
 
 Because when I'm honest about impermanence, I have to face death. Not as an abstract concept, but as a reality. My death. The death of people I love. The death of species, ecosystems, ways of life. The honeycomb on the trail—was it abandoned because the colony collapsed? Because of pesticides, habitat loss, the same forces that are unraveling so much? The climate crisis is making this visible on a scale that's hard to bear. The patterns I've relied on—that fall follows summer, that grass turns and falls—are becoming less reliable.
 
-<img src="/images/field-notes/sage-trail.png" alt="Sage in autumn fields" />
+<img src="/images/field-notes/sage-trail.jpg" alt="Sage in autumn fields" />
 
 Buddhist teachings on death aren't meant to be comforting in the way we might want. They're meant to be clarifying. The Buddha taught that contemplating death is essential to awakening. Not because death is something to fear or avoid, but because understanding that this body, this life, this moment is temporary changes how we live. It can cut through the delusion that we have unlimited time, unlimited resources, unlimited capacity to avoid what's difficult.
 
