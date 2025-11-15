@@ -98,30 +98,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .about-image {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
 
   .about-image img {
     width: 100%;
-    max-width: 500px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(21, 21, 21, 0.12);
-    margin: 0 auto;
     display: block;
-  }
-
-  /* Desktop: horizontal layout for images */
-  @media (min-width: 900px) {
-    .about-image {
-      flex-direction: row;
-      gap: var(--space-md);
-    }
-
-    .about-image img {
-      max-width: none;
-      flex: 1;
-    }
   }
 
   .about-text h2 {
@@ -157,7 +142,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* Desktop: side-by-side layout */
   @media (min-width: 900px) {
     .about-content {
-      grid-template-columns: 600px 1fr;
+      grid-template-columns: 350px 1fr;
       gap: var(--space-2xl);
     }
 
