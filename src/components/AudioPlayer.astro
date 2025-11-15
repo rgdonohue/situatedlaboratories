@@ -1,6 +1,7 @@
 ---
 // AudioPlayer.astro - from PLAN.md + DESIGN_PLAN.md
 // Requirements: transcript display, keyboard controls, no autoplay, duration display
+import { marked } from 'marked';
 
 interface Props {
   src: string;
@@ -12,6 +13,9 @@ interface Props {
 const { src, title, transcript, duration } = Astro.props;
 const audioId = `audio-${Math.random().toString(36).substr(2, 9)}`;
 const transcriptId = `transcript-${audioId}`;
+
+// Render transcript markdown to HTML
+const transcriptHtml = transcript ? marked.parse(transcript) : '';
 ---
 
 <div class="audio-player">
@@ -40,7 +44,7 @@ const transcriptId = `transcript-${audioId}`;
       </svg>
     </summary>
     <div class="transcript-content" id={transcriptId}>
-      <div class="transcript-text" set:html={transcript} />
+      <div class="transcript-text" set:html={transcriptHtml} />
     </div>
   </details>
 </div>
