@@ -65,7 +65,7 @@ If you are in immediate distress, please contact local emergency services or a c
 
 Material may touch on trauma, grief, and substance use, but it is not therapy or medical advice. Please seek licensed therapists, medical providers, or crisis resources when needed.
 
-This work is offered freely. If you find it helpful and are resourced, you're invited to support it through dana (generosity), but this is not required — all content remains freely accessible.
+This work is offered freely. If you find it helpful and can afford it, you're invited to support it through dana (generosity), but this is not required — all content remains freely accessible.
 
 ---
 
