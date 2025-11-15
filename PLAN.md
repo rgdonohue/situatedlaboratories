@@ -1,5 +1,5 @@
-# Situated Laboratories – Dharma & Yoga Practice Site  
-_Project Brief & Content Plan (v0.1)_
+# Situated Laboratories – Dharma, Yoga & Justice Site  
+_Project Brief & Content Plan (v0.2)_
 
 ---
 
@@ -7,162 +7,214 @@ _Project Brief & Content Plan (v0.1)_
 
 **Situated Laboratories** is being rebooted as a home for:
 
-- Dharma and yoga practice grounded in everyday life
-- Recovery-oriented, nervous-system-aware approaches to practice
-- Writing, audio, and video resources that weave:
-  - Early Buddhist teachings (Four Noble Truths, Eightfold Path)
-  - Ashtanga’s eight limbs (with emphasis on breath, bandhas, pratyahara, ethics)
-  - Health, recovery, climate grief, and late-capitalist burnout
+- Yoga and Buddhist practice grounded in everyday life
+- Social and ecological justice woven into dharma (not bolted on)
+- Thoughtful writing and simple practices for people living through political, climate, and digital upheaval
 
-This is **not** a GIS/mapping portfolio (that role now lives with **Small Batch Maps**).  
-This is a **practice lab** for people navigating suffering in a burning world.
+This is **not** a GIS or mapping portfolio (that role lives with **Small Batch Maps**).
+
+Instead, it’s a **practice-centered laboratory**: a place to experiment with how the Buddha’s teachings, the eight limbs of yoga, and systems-thinking can respond to the conditions of late capitalism, rising authoritarianism, and collective anxiety.
+
+Recovery is present as subtext and personal history, but not the explicit top-level brand.
+
+**Laboratories metaphor (explicit):**
+
+> “Situated Laboratories” treats each life as a site-specific experiment in liberation. Practices are tested in real conditions — insomnia, grief, burnout, solidarity work — and refined with honesty rather than perfectionism.
 
 ---
 
 ## 2. Goals
 
-1. **Offer real, workable practices**  
-   Short, grounded practices (audio/video) people can actually use in messy lives.
+1. **Offer grounded, workable practices**  
+   Short, realistic practices that people can integrate into daily life, not aspirational retreats.
 
-2. **Integrate dharma, yoga, and recovery**  
-   Show how the Four Noble Truths and the eight limbs apply to addiction, burnout, and systemic harm.
+2. **Integrate dharma, yoga, and justice**  
+   Show how the Four Noble Truths, the Eightfold Path, and the eight limbs of yoga speak directly to:
+   - structural harm
+   - climate crisis
+   - digital overload
+   - collective struggle
 
 3. **Tell honest, public-facing stories**  
-   Essays and diagrams that name power, injustice, and grief while staying rooted in practice.
+   Essays and diagrams that name power and systems (capitalism, white supremacy, digital fascism) while continually returning to:  
+   *What does this mean for practice in a nervous system and a body?*
 
-4. **Create a soft doorway into deeper work**  
-   Optionally point toward 1:1 accompaniment, small groups, or other offerings—without building a “sales funnel.”
+4. **Keep scope humane and sustainable**  
+   Start text-first, with minimal tech and production overhead, and grow only as capacity and energy allow.
+
+5. **Create a soft doorway into deeper work**  
+   Offer optional ways to engage more deeply (readings, small groups, 1:1 sessions, donations) without building a marketing funnel.
 
 ---
 
-## 3. Audience
+## 3. Primary Focus & Audience
 
-Primary audiences:
+### 3.1 Primary Orientation
 
-- People in or exploring **recovery** (alcohol, substances, process addictions).
-- **Burned-out helpers**: organizers, caregivers, therapists, teachers, tech / knowledge workers.
-- Practitioners drawn to **dharma and yoga** who:
-  - Don’t resonate with guru culture or culty vibes.
-  - Want depth without dogma or spiritual bypass.
-  - Care about justice, ecology, and collective liberation.
+**Center of gravity:**  
+- **Yoga/Buddhism + social justice.**  
+- Recovery and mental health are present, but quiet — embedded in how suffering is understood, not branded explicitly.
+
+### 3.2 Primary Audiences (v0.2)
+
+1. **Justice-oriented dharma/yoga practitioners**
+   - Folks who care about liberation *and* power structures.
+   - Interested in integrating ethics, activism, and contemplative practice.
+
+2. **Burned-out helpers and knowledge workers**
+   - Organizers, educators, health workers, tech/logistics people.
+   - Want practices that acknowledge systemic causes of burnout, not just “self-care.”
+
+3. **Curious readers at the edges of practice**
+   - People who’ve brushed up against dharma or yoga and want depth without:
+     - guru culture
+     - pseudoscience
+     - spiritual bypass
+
+Recovery-oriented readers are welcome and implicitly held by the framing, without being singled out as a niche.
 
 ---
 
 ## 4. Positioning & Core Promise
 
-Working tagline:
+Primary tagline (hero):
 
-> **Dharma, Yoga & Recovery Practice**  
-> *Rooted in Embodiment. Guided by Liberation.*
+> **Yoga, dharma & social justice practice for a burning world.**
+
+Secondary phrase (can appear in footer, about page, or supporting text):
+
+> *Experiments in liberation*
 
 Expanded positioning:
 
-> Situated Laboratories is a home for practice, writing, and experiment at the intersection of Buddhist insight, Ashtanga yoga, and long-haul healing. It offers practices, reflections, and maps for people navigating recovery, burnout, and life in a burning world—without gurus, spiritual bypass, or toxic positivity.
+> Situated Laboratories is a home for practice, study, and experiment at the intersection of Buddhist insight, Ashtanga yoga, and collective liberation. It offers essays, study guides, and simple practices for people navigating burnout, climate grief, political anxiety, and everyday suffering — without gurus, spiritual bypass, or toxic positivity.
 
 ---
 
-## 5. Content Pillars
+## 5. Content Pillars (v0.2)
 
-These replace the old **MAPPING / COURSES / RESEARCH** badges.
+To reduce scope creep, v0.2 focuses on **two primary pillars** at launch and treats the third as “lightweight”:
 
-### 5.1 Practice Lab
-
-**What it is:**  
-Short guided practices (audio/video) for nervous systems under pressure.
-
-**Types of content:**
-
-- 5–25 minute meditations and gentle movement sessions
-- Ashtanga limb-focused practices:
-  - Ethics (yamas/niyamas in daily life)
-  - Breath and bandhas
-  - Pratyahara (sense withdrawal, screen boundaries)
-  - Dharana/dhyana (concentration and open awareness)
-- Micro-practices (2–5 minutes) for:
-  - Craving and urges
-  - Late-night anxiety
-  - Phone/doomscroll spikes
-  - Post-conflict regulation
-
----
-
-### 5.2 Field Notes
+### 5.1 Field Notes (PRIMARY)
 
 **What it is:**  
-Essays and reflections on suffering, systems, and the path.
+Essays and short reflections on suffering, systems, and the path.
 
 **Themes:**
 
-- *Maps of Suffering* – Four Noble Truths applied to health care, addiction, and politics.
-- *Geographies of Craving* – Place, class, and the landscape of addiction.
-- *Ashtanga in the Wild* – How the limbs appear off the mat.
-- *Tools for When You’re Not Okay* – Short, honest pieces for acute distress.
+- *Dharma in the Ruins* – Four Noble Truths in the context of climate, capitalism, and political breakdown.
+- *Embodied Justice* – How ethics (yamas/niyamas, right speech, right livelihood) intersect with solidarity, organizing, and everyday choices.
+- *Maps of Mind & World* – Geographical and cartographic metaphors for mind, craving, and collective conditions.
+- *When It’s Actually Hard* – Short, real-time pieces on insomnia, anxiety, conflict, and grief from a dharma lens.
 
-Tone: intelligent, plain-spoken, justice-aware, non-performative.
+**Format:**
+
+- Text-first.
+- Occasional diagrams or simple images for clarity (Tufte-style when possible).
+- Aim: 1 essay or note every **2–4 weeks** (cadence can adjust).
 
 ---
 
-### 5.3 Study & Support
+### 5.2 Practice Lab (SECONDARY at launch)
 
 **What it is:**  
-Friendly study materials and light-touch offerings.
+Simple, low-production practices that support readers of the essays.
 
-**Content:**
+**Launch strategy:**  
+- **Start with audio-only**, minimal editing.
+- Host text transcripts alongside audio.
+- Green-light only what you can realistically sustain.
 
-- Plain-language explainers:
+**Types of content (initial):**
+
+- 5–10 minute practices:
+  - “Grounding before reading the news”
+  - “Micro-metta for when you’re pissed off”
+  - “Three-breath reset between meetings”
+- Occasional 15–20 minute sessions:
+  - Body scan with right effort / right intention framing.
+  - Breath-focused practice with light bandha and spine cues.
+
+Video, complex sequences, and full Ashtanga progressions get deferred to a later phase.
+
+---
+
+### 5.3 Study & Support (LIGHTWEIGHT at launch)
+
+**What it is:**  
+A simple study hub with a few foundational texts and a soft pointer to future offerings.
+
+**Initial content:**
+
+- Short explainers:
   - Four Noble Truths
   - Eightfold Path
-  - Eight limbs of yoga (including bandhas, pranayama, pratyahara)
-- Reading lists with commentary:
-  - “If you only read three things about…”
-- Occasional offerings (optional / future):
-  - Small group practice series
-  - 1:1 spiritual accompaniment / practice mentoring (clearly not therapy)
+  - Eight limbs of yoga (with brief notes on bandhas, pranayama, pratyahara)
+- A reading list:
+  - “Three starting points for dharma + justice”
+  - “Three starting points for yoga as path, not performance”
+
+**Future (not required at launch):**
+
+- Small-group series (“Dharma & Justice Lab,” “Eightfold Path in Everyday Work”).
+- 1:1 accompaniment / mentoring page with clear boundaries.
 
 ---
 
 ## 6. Information Architecture (IA)
 
-Top-level navigation (v0.1):
+Top-level navigation (v0.2):
 
 - **Home**
-- **Practice Lab**
 - **Field Notes**
+- **Practice Lab**
 - **Study**
 - **About**
-- **Contact** (can be simple email form or obfuscated address)
+- **Support** (combining Contact + dana/donations + FAQ + "work with me" notes)
 
-### 6.1 Home Page Layout (Draft)
+### 6.1 Home Page Layout (Final)
 
-1. **Hero Section**
-   - Heading: “Dharma, Yoga & Recovery Practice”
-   - Subheading: “Rooted in Embodiment. Guided by Liberation.”
-   - 2–3 sentence intro (from positioning above).
+**Note:** See DESIGN_PLAN.md Section 7 for detailed specifications. Final order:
 
-2. **Three Feature Tiles**  
-   Echo old badges visually:
+1. **Header / Nav**
+   - Site name and navigation links
 
-   - **Practice Lab**  
-     Short guided sessions for nervous systems under pressure.
+2. **Hero Section**
+   - Overline: "YOGA · DHARMA · SOCIAL JUSTICE" (rust color)
+   - Main H1: "Yoga, dharma & social justice practice for a burning world."
+   - Short paragraph (from positioning)
+   - Button row: "Read the latest Field Note" + "Try a 5-minute practice"
 
-   - **Field Notes**  
-     Essays on suffering, systems, and staying awake in late capitalism.
+3. **Three Pillar Tiles**
+   - **Field Notes** – Essays on suffering, systems, and the path.
+   - **Practice Lab** – Simple practices for nervous systems under pressure.
+   - **Study** – Friendly guides to sutras, suttas, and ethics in context.
 
-   - **Study & Support**  
-     Friendly guides and occasional spaces for deeper practice.
+4. **Featured Content (60/40 split)**
+   - Left (60%): Featured Essay with tag chip, title, excerpt, link
+   - Right (40%): Featured Practice with tag chip, title, description, duration
 
-3. **Featured Practice & Featured Essay**
-   - One highlighted practice (e.g., 10-minute morning check-in).
-   - One highlighted essay (e.g., “Why I Still Believe in the Path”).
+5. **Quote Block**
+   - Dharma teaching with vertical contour line accent (rust color)
+   - Example: "Freedom is not found by escaping conditions..."
 
-4. **Short “About Richard” Strip**
-   - 2–3 sentences: ex-professor, person in recovery, geographer, yoga practitioner.
+6. **About Strip**
+   - 2–3 sentence bio with emphasis on:
+     - geographer / ex-professor
+     - dharma and yoga practitioner
+     - justice-oriented orientation
+   - Link to full About page
 
-5. **Email / RSS Invite**
-   - Low-pressure: “Occasional field notes and practice updates; no marketing funnel.”
+7. **Newsletter / Support Strip**
+   - Email signup form (Buttondown embed)
+   - Link to Support page (dana/donations)
 
-6. **FAQ / Boundaries (preview)**
-   - Link to full FAQ or shorter version on home.
+8. **Footer with Crisis Resources**
+   - Always visible on all pages
+   - Dark background with crisis resources (988 lifeline)
+   - Navigation, legal, privacy note
+
+**Note:** FAQ content is on the Support page, not a separate section on home.
 
 ---
 
@@ -170,118 +222,195 @@ Top-level navigation (v0.1):
 
 ### 7.1 Tone
 
-- Direct, sober, and warm.
-- No guru theatrics, no spiritual flexing.
+- Clear, intelligent, and non-performative.
 - Willing to name:
   - Capitalism
   - White supremacy
-  - Climate collapse
-  - Digital fascism and disinformation
-- Always ties back to practice: “So what do we do with this in our bodies, schedules, and choices?”
+  - Climate breakdown
+  - Digital fascism and disinfo
+- Always returns to:
+  - What does this mean for practice?
+  - What can one nervous system reasonably hold and respond to?
 
-### 7.2 Boundary Statements
+### 7.2 Boundaries & Disclaimers
 
-Include a clear disclaimer section (footer + FAQ):
+Emphasize:
 
-- This site is **not therapy**, medical care, or crisis support.
-- Practices are shared as personal and educational material.
-- Encourage readers to:
-  - Work with licensed clinicians, doctors, or crisis lines as needed.
-  - Use discernment; adapt practices to their own context and support network.
+- This site offers **educational and spiritual** material, not professional clinical care.
+- Material may touch on trauma, grief, and substance use, but:
+  - It is not therapy.
+  - It is not medical advice.
+- Encourage readers to seek:
+  - Licensed therapists / medical providers where needed.
+  - Crisis hotlines (e.g. 988 in the U.S.) or local resources in emergencies.
 
----
+FAQ snippet (for reuse):
 
-## 8. FAQ Draft (v0.1)
-
-**Is this therapy or treatment?**  
-No. Situated Laboratories offers spiritual practice, reflection, and nervous-system-friendly tools. I’m not functioning here as a therapist or doctor, and nothing on this site is medical or clinical advice.
-
-**Who is this for?**  
-People in or curious about recovery; burned-out helpers and organizers; tech and knowledge workers; and anyone drawn to dharma and yoga who wants depth without dogma or guru culture.
-
-**Do you work with people 1:1?**  
-Sometimes. When I have capacity, I offer spiritual accompaniment / practice mentoring (not therapy). We focus on contemplative practice, ethics, and integrating dharma into everyday life.
-
-**What if I’m in crisis or unsafe right now?**  
-This site isn’t equipped for crisis response. If you’re in immediate danger or distress, please reach out to local emergency services, a crisis hotline (e.g., 988 in the U.S.), or trusted people on the ground.
+> **Is this therapy or treatment?**  
+> No. Situated Laboratories offers spiritual practice, study, and reflection. It’s not a substitute for therapy, medical care, or crisis support.
 
 ---
 
-## 9. Initial Content Backlog (Concrete Starters)
+## 8. Accessibility & Justice Commitments
 
-1. **Essay:**  
-   *Why I Still Believe in the Path (After Burnout, Academia, and Addiction)*  
-   - Origin story + what Situated Laboratories is now.
+To align with a justice-oriented ethos:
 
-2. **Essay:**  
-   *Four Noble Truths for a Sick Healthcare System*  
-   - Each truth mapped to US health, recovery, and structural harm.
-
-3. **Practice (Audio/Video):**  
-   *10-Minute Morning Check-In*  
-   - Breath, body scan, intention-setting through right intention / right effort.
-
-4. **Practice:**  
-   *Three-Breath Micro-Pratyahara at Your Desk*  
-   - Short sense-withdrawal for phone/scroll moments.
-
-5. **Study Note:**  
-   *Ashtanga’s Eight Limbs, Without the Gymnastics*  
-   - 1–2 paragraphs per limb, focused on daily-life application.
-
-6. **Diagram / Visual:**  
-   *Map of Craving*  
-   - Trigger → thought → body → action → consequence.  
-   - Overlaid with possible interruption points (breath, ethics, mindfulness).
+- **Transcripts** for all audio (at least basic, edited over time).
+- **High-contrast design** and legible type.
+- Avoid autoplay media, flickering animations, or interaction that can spike nervous systems.
+- Minimize paywalls; where paid content exists:
+  - Offer sliding scale / scholarship / “no one turned away” policy where possible.
 
 ---
 
-## 10. Technical / Design Notes (High-Level)
+## 9. Discoverability & Outreach Strategy (v0.2)
 
-- **Aesthetic:**
-  - Echo 2010 Situated Labs: clean, typographically strong, minimal icons.
-  - Palette: calm neutrals with a single accent color (e.g., deep teal or rust).
-  - Plenty of whitespace; nothing “busy” or over-illustrated.
+Keep it *light* and honest, not growth-hacky.
 
-- **Implementation (v0.1 idea, flexible):**
-  - Static site generator (e.g., Eleventy, Astro, or Hugo) or simple Next.js site.
-  - Markdown-based content for essays and practice notes.
-  - Embed audio/video via simple player (self-hosted or privacy-respecting platform).
-  - RSS feed for Field Notes.
+**SEO basics:**
 
-- **Future Possibilities:**
-  - Tagging system for posts (e.g., “craving,” “grief,” “nervous system,” “Ashtanga,” “politics”).
-  - Interactive diagrams or maps for certain essays.
-  - Member area for small group courses (only if/when it feels right).
+- Plain-language page titles and meta descriptions:
+  - Include key phrases like “dharma and social justice,” “yoga and liberation,” “Buddhism and climate grief.”
+- Semantic HTML structure and clear headings.
 
----
+**Low-lift outreach:**
 
-## 11. Next Steps (Actionable)
+- Occasional posts or short threads on existing platforms (Twitter/X, Bluesky, Mastodon, etc.) summarizing:
+  - New essays.
+  - Key insights or diagrams.
+- Guest essays or cross-posts:
+  - On aligned dharma/justice blogs, newsletters, or orgs (long-term).
 
-1. **Finalize positioning**  
-   - Confirm hero text + tagline.
-   - Confirm top-level nav labels.
+**Email list:**
 
-2. **Draft key pages (MVP copy):**
-   - Home (hero + 3 tiles + short bio + FAQ preview).
-   - About (500–700 words).
-   - One Practice Lab entry.
-   - One Field Notes essay.
-   - Study landing page with 2–3 short explainers.
-
-3. **Choose tech stack & repo structure**  
-   - Create project directory + `README.md` with this brief.
-   - Decide static generator or framework.
-   - Scaffold initial layout (home + 2 content types).
-
-4. **Design basics**
-   - Choose fonts and color palette.
-   - Sketch or define 3 simple icons/badges for:
-     - Practice Lab
-     - Field Notes
-     - Study & Support
+- Choose a simple, privacy-respecting provider (e.g., Buttondown, Ghost, or similar).
+- Cadence: “occasional dispatches,” not weekly grind.
+- Use it to:
+  - Announce new Field Notes and practices.
+  - Share small announcements about experiments, groups, or retreats.
 
 ---
 
-> “In this fathom-long body, with its perception and mind, I declare there is the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world.”  
-> — The Buddha
+## 10. Sustainability & Revenue (Soft-Touch)
+
+Even if not the main driver, name that this is labor.
+
+**Options:**
+
+- **Dana/Donations page:**
+  - Explain traditional dana (generosity) and modern realities.
+  - Include one-time and recurring options (Patreon, OpenCollective, etc.).
+
+- **Sliding-scale 1:1 sessions (future):**
+  - Framed as spiritual accompaniment / practice mentoring.
+  - Clear scope: not therapy, not crisis work.
+
+- **Small group offerings (future):**
+  - Time-bound series (e.g., 4–6 weeks).
+  - Themes like:
+    - “Four Noble Truths in a Burning World”
+    - “Ethics, Speech, and Online Life”
+
+Monetization follows the content; content doesn’t become fodder for monetization.
+
+---
+
+## 11. Technical Decisions (v0.2 Draft)
+
+To reduce complexity:
+
+- **Framework / SSG:**  
+  - Use a Markdown-first static site approach. For example:
+    - Astro, Eleventy, or Hugo (final choice to be made once).
+  - Requirements:
+    - Easy Markdown content.
+    - Simple RSS feed for Field Notes.
+
+- **Hosting:**
+  - Static hosting (e.g., Netlify, Vercel, or similar).
+  - Custom domain: `situatedlaboratories.com` (or existing domain).
+
+- **Audio Hosting:**
+  - Phase 1: host small audio files directly via site host or simple storage bucket.
+  - Consider upgrading to a dedicated podcast/audio host only if needed later.
+
+- **Email:**
+  - Use a low-friction newsletter tool (e.g., Buttondown, Ghost, or similar).
+  - Link clearly from Home and Support pages.
+
+- **Analytics:**
+  - Privacy-respecting option (e.g., Plausible, Fathom, or no analytics initially).
+  - Focus on basic patterns (page views, referrers), not profiling.
+
+---
+
+## 12. Initial Content Backlog (Updated)
+
+Prioritize pieces that are **text-first** and **aligned with dharma + justice**.
+
+1. **Field Notes Essay:**  
+   *“Dharma in a Burning World: Why Practice Still Matters”*  
+   - Origin story + why Situated Laboratories exists now.
+
+2. **Field Notes Essay:**  
+   *“Uncertainty Without Numbing: Insomnia as Practice”*  
+   - Expand on your recent reflection:
+     - “I’ve always embraced uncertainty… it was easier when I could numb it.”
+   - Frame insomnia and restlessness as part of the lab.
+
+3. **Field Notes Essay:**  
+   *“Four Noble Truths for Late Capitalism”*  
+   - Dukkha → precarity, burnout, climate anxiety.  
+   - “Origin” as structural causes, not just personal craving.  
+   - Possibility of relief + path in that context.
+
+4. **Study Note:**  
+   *“Eightfold Path for People with Jobs and Phones”*  
+   - Brief, practical framing of each factor.
+
+5. **Practice (Audio + Transcript):**  
+   *“Three-Breath Reset Before Reading the News”*  
+   - 3–5 minutes, audio-only, simple.
+
+6. **Practice (Audio + Transcript):**  
+   *“Short Metta for Burned-Out Helpers”*  
+   - 5–7 minutes of loving-kindness with justice-aware language.
+
+7. **Diagram / Visual:**  
+   *“From System to Sensation”*  
+   - Visual showing:
+     - Systemic conditions → events → thoughts → body sensations → actions.
+     - Mark where practice can intervene (breath, ethics, attention).
+
+---
+
+## 13. Next Steps (Actionable v0.2)
+
+1. **Lock core focus**
+   - Confirm that yoga/Buddhism + social justice is the explicit center.
+   - Affirm that recovery remains implicit, not foregrounded.
+
+2. **Draft key pages**
+   - `index.md` (Home): hero, 3 tiles, short bio, FAQ preview.
+   - `about.md`: 500–700 words situating you and the lab metaphor.
+   - First Field Notes essay (likely #1 or #2 above).
+   - Simple Study page with at least one explainer (e.g., Four Noble Truths).
+
+3. **Choose tech stack**
+   - Decide on Astro/Eleventy/Hugo (or similar) and create repo + basic layout.
+   - Add RSS feed for Field Notes.
+
+4. **Set a humane content cadence**
+   - Example:  
+     - 1 Field Notes essay every 3–4 weeks.  
+     - 1 new simple practice every 1–2 months.
+
+5. **Add Access & Support scaffolding**
+   - Draft Accessibility & Justice statement.
+   - Add Support page:
+     - Email list link.
+     - Optional donation link (even if “coming soon”).
+
+---
+
+> “Freedom is not found by escaping conditions, but by seeing clearly how we are conditioned — and responding with wisdom instead of habit.”
