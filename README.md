@@ -5,6 +5,8 @@
 
 A practice-centered laboratory for integrating Buddhist insight, Ashtanga yoga, and collective liberation. Essays, study guides, and simple practices for people navigating burnout, climate grief, political anxiety, and everyday suffering — without gurus, spiritual bypass, or toxic positivity.
 
+![situated laboratories](sl.png)
+
 ---
 
 ## Project Overview
