@@ -26,10 +26,6 @@ transcript: |
   When you're ready, slowly open your eyes or bring your attention back to the room. Notice how you feel. You can return to this practice anytime you need to feel grounded.
 ---
 
-# Feet on Floor
-
-This is a body awareness practice that helps you feel grounded when anxiety or overwhelm takes over. It's simple, but it works.
-
 **When to use this:**
 - When you feel anxious, panicky, or ungrounded
 - When your mind is racing and you need to come back to your body
@@ -38,26 +34,6 @@ This is a body awareness practice that helps you feel grounded when anxiety or o
 - Before sleep, if your mind won't settle
 
 **How long:** 5-7 minutes
-
-## The Practice
-
-Find a comfortable position. You can sit in a chair, on the floor, or lie down. The important thing is that your feet can be in contact with the floor or ground.
-
-**Feet:** Start by bringing your attention to your feet. Feel your feet on the floor. Notice the weight of your body pressing down. Notice the floor pressing back up. Your feet are holding you. The floor is holding your feet. You're supported.
-
-**Legs:** Move your attention up to your legs. Notice your thighs, your calves. Feel the weight of your legs. They're heavy. They're solid. They connect you to the ground.
-
-**Hips and pelvis:** Notice your hips, your pelvis. This is your center of gravity. Feel how your body settles around this center. You're balanced here.
-
-**Torso:** Bring your attention to your torso—your belly, your chest, your back. Notice your breath moving through this space. Your body is breathing. You don't have to do anything. It's just happening.
-
-**Shoulders and arms:** Notice your shoulders. Are they holding tension? Let them drop if you can. Feel your arms. They're heavy. They're resting.
-
-**Head and neck:** Finally, bring your attention to your head and neck. Notice the weight of your head. It's heavy. It's supported by your neck, which is supported by your shoulders, which are supported by your torso, which is supported by your hips, which are supported by your legs, which are supported by your feet, which are supported by the floor.
-
-**Full body:** Take a moment to feel your whole body at once. You're here. You're solid. You're supported. The floor is holding you. Gravity is holding you. You don't have to hold yourself up—you're being held.
-
-When you're ready, slowly open your eyes or bring your attention back to the room. Notice how you feel. You can return to this practice anytime you need to feel grounded.
 
 ## Notes
 
