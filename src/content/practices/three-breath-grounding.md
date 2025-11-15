@@ -18,10 +18,6 @@ transcript: |
   That's it. Three breaths. You can return to this anytime you need to ground yourself.
 ---
 
-# Three-Breath Grounding
-
-This is a simple practice you can do anywhere, anytime. No special posture needed. You can do this sitting, standing, or lying down.
-
 **When to use this:**
 - Before reading difficult news or engaging with heavy content
 - When you feel overwhelmed or anxious
@@ -30,18 +26,6 @@ This is a simple practice you can do anywhere, anytime. No special posture neede
 - Any time you need to reset your nervous system
 
 **How long:** 3-5 minutes (or just three breaths if that's all you have)
-
-## The Practice
-
-This practice is just three breaths. That's it. No fancy techniques, no complicated instructions. Just three intentional breaths.
-
-**First breath:** Take a slow, full breath in. Notice the air entering your body. As you breathe out, let your shoulders drop. Release any tension you're holding.
-
-**Second breath:** Breathe in again, this time noticing where in your body you feel the breath. Maybe it's your chest, your belly, your ribs expanding. As you breathe out, let your jaw relax. Unclench your teeth if they're clenched.
-
-**Third breath:** One more breath. This time, as you breathe in, bring your attention to your feet. Feel your feet on the floor, or your body on whatever surface you're on. As you breathe out, let yourself settle. You're here. You're present. This moment is enough.
-
-That's it. Three breaths. You can return to this anytime you need to ground yourself.
 
 ## Notes
 
