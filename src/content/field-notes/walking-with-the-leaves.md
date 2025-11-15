@@ -12,6 +12,8 @@ I found a honeycomb on the trail today. Not in a tree, but on the ground, fallen
 
 I've been walking in the fall, practicing walking meditation on these trails. Not the formal kind with precise steps and counting, but the kind where you notice your feet on the ground, the breath in your body, the way the light changes as you move. The kind where you're present to what's actually happening, not trying to escape it.
 
+<img src="/images/field-notes/ev-and-richard.jpg" alt="Ev and Richard on the trail" />
+
 The grass has turned orange. Long, dry stalks that catch the light and hold it, standing in front of mountains that are still green but starting to show the shift. The sage is still there, silver-green in the same fields, holding its own against the change. But the grass—the grass has given itself over completely to the season.
 
 <img src="/images/field-notes/grass-mountains.jpg" alt="Orange grass in front of mountains" />
@@ -26,7 +28,7 @@ Walking meditation in the fall makes this visible in a way that sitting practice
 
 This is where the teaching gets uncomfortable.
 
-Because when I'm honest about impermanence, I have to face death. Not as an abstract concept, but as a reality. My death. The death of people I love. The death of species, ecosystems, ways of life. The honeycomb on the trail—was it abandoned because the colony collapsed? Because of pesticides, habitat loss, the same forces that are unraveling so much? The climate crisis is making this visible on a scale that's hard to bear. The patterns I've relied on—that fall follows summer, that grass turns and falls—are becoming less reliable.
+Because when I'm honest about impermanence, I have to face death. Not as an abstract concept, but as a reality. My death. The death of people I love. The death of species, ecosystems, ways of life. The honeycomb on the trail—was it abandoned because the colony collapsed? Because of pesticides, habitat loss, the same forces that are unraveling so much? The climate crisis is making this visible on a scale that's hard to bear. The patterns I've relied on—that fall follows summer, that grass turns and falls—are becoming less reliable.gi
 
 Buddhist teachings on death aren't meant to be comforting in the way we might want. They're meant to be clarifying. The Buddha taught that contemplating death is essential to awakening. Not because death is something to fear or avoid, but because understanding that this body, this life, this moment is temporary changes how we live. It can cut through the delusion that we have unlimited time, unlimited resources, unlimited capacity to avoid what's difficult.
 
