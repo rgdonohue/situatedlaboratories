@@ -1,50 +1,91 @@
 ---
-// NewsletterSignup.astro - from DESIGN_PLAN.md
-// Buttondown embed form integration
+// ContactForm.astro - Netlify Forms integration
 ---
 
-<section class="newsletter-signup" aria-labelledby="newsletter-heading">
-  <h2 id="newsletter-heading" class="newsletter-heading">Stay in the experiment</h2>
-  <p class="newsletter-description">
-    Infrequent notes when there's something worth saying — new essays, practices, and reflections.
+<section class="contact-form-section" aria-labelledby="contact-heading">
+  <h2 id="contact-heading" class="contact-heading">Get in touch</h2>
+  <p class="contact-description">
+    Questions, feedback, or want to share how these practices have been helpful? Send a message.
   </p>
   
-  <!-- Buttondown embed form -->
   <form
-    action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
-    method="post"
-    target="popupwindow"
-    onsubmit="window.open('https://buttondown.email/newsletters', 'popupwindow')"
-    class="newsletter-form"
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/contact-success"
+    class="contact-form"
   >
+    <input type="hidden" name="form-name" value="contact" />
+    <p class="sr-only">
+      <label>
+        Don't fill this out if you're human: <input name="bot-field" />
+      </label>
+    </p>
+    
     <div class="form-group">
-      <label for="email" class="sr-only">Email address</label>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        class="form-input"
+        aria-label="Your name"
+      />
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
       <input
         type="email"
         name="email"
         id="email"
-        placeholder="your@email.com"
         required
-        class="newsletter-input"
-        aria-label="Email address"
+        class="form-input"
+        aria-label="Your email address"
       />
-      <button type="submit" class="newsletter-button">
-        Get updates
-      </button>
     </div>
-    <input type="hidden" value="1" name="embed" />
+    
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input
+        type="text"
+        name="subject"
+        id="subject"
+        required
+        class="form-input"
+        aria-label="Message subject"
+      />
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="5"
+        required
+        class="form-textarea"
+        aria-label="Your message"
+      ></textarea>
+    </div>
+    
+    <button type="submit" class="form-button">
+      Send message
+    </button>
   </form>
 </section>
 
 <style>
-  .newsletter-signup {
+  .contact-form-section {
     padding: var(--space-xl) 0;
     text-align: center;
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
   }
 
-  .newsletter-heading {
+  .contact-heading {
     font-family: var(--font-serif);
     font-size: clamp(1.75rem, 2.5vw, 2rem);
     font-weight: 700;
@@ -52,7 +93,7 @@
     color: var(--color-ink);
   }
 
-  .newsletter-description {
+  .contact-description {
     font-size: 1rem;
     color: var(--color-ink-secondary);
     margin-bottom: var(--space-lg);
@@ -61,18 +102,28 @@
     margin-right: auto;
   }
 
-  .newsletter-form {
-    max-width: 500px;
+  .contact-form {
+    max-width: 600px;
     margin: 0 auto;
+    text-align: left;
   }
 
   .form-group {
-    display: flex;
-    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
   }
 
-  .newsletter-input {
-    flex: 1;
+  .form-group label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
     padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--color-border);
     border-radius: 4px;
@@ -80,15 +131,22 @@
     font-size: 1rem;
     background: var(--color-paper);
     color: var(--color-ink);
+    box-sizing: border-box;
   }
 
-  .newsletter-input:focus {
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
     outline: 2px solid var(--color-teal);
     outline-offset: 2px;
     border-color: var(--color-teal);
   }
 
-  .newsletter-button {
+  .form-button {
     padding: var(--space-sm) var(--space-lg);
     background: var(--color-teal);
     color: var(--color-paper);
@@ -96,15 +154,18 @@
     border-radius: 4px;
     font-family: var(--font-sans);
     font-weight: 500;
+    font-size: 1rem;
     cursor: pointer;
     transition: var(--transition-base);
+    width: 100%;
+    margin-top: var(--space-sm);
   }
 
-  .newsletter-button:hover {
+  .form-button:hover {
     background: var(--color-teal-light);
   }
 
-  .newsletter-button:focus-visible {
+  .form-button:focus-visible {
     outline: 2px solid var(--color-teal);
     outline-offset: 2px;
   }
@@ -122,12 +183,8 @@
   }
 
   @media (max-width: 480px) {
-    .form-group {
-      flex-direction: column;
-    }
-
-    .newsletter-button {
-      width: 100%;
+    .contact-form {
+      padding: 0 var(--space-md);
     }
   }
 </style>
