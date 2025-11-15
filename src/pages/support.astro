@@ -6,45 +6,198 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Support & Contact" 
   description="Support Situated Laboratories through dana, contact information, and FAQ."
 >
-  <article class="container" style="padding: var(--space-2xl) 0;">
-    <h1>Support & Contact</h1>
-    
-    <section style="margin-bottom: var(--space-xl);">
-      <h2>Dana: Generosity as Practice</h2>
-      <p>
-        <em>This section is a placeholder. Use CONTENT_TEMPLATES.md to draft the Support page content.</em>
-      </p>
-    </section>
-    
-    <section style="margin-bottom: var(--space-xl);">
-      <h2>How to Support</h2>
-      <p>
-        <em>Add donation links and options here.</em>
-      </p>
-    </section>
-    
-    <section style="margin-bottom: var(--space-xl);">
-      <h2>Contact</h2>
-      <p>
-        <em>Add contact information here.</em>
-      </p>
-    </section>
-    
-    <section style="margin-bottom: var(--space-xl);">
-      <h2>Frequently Asked Questions</h2>
-      <p>
-        <em>Use CONTENT_TEMPLATES.md to draft FAQ content.</em>
-      </p>
-    </section>
-    
-    <section>
-      <h2>Crisis Resources</h2>
-      <p>
-        If you are in immediate distress, please contact local emergency services or a crisis resource.
-      </p>
-      <p>
-        <strong>U.S.:</strong> Call or text <a href="tel:988">988</a> for the <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer">Suicide & Crisis Lifeline</a>.
-      </p>
-    </section>
+  <article class="support-page">
+    <div class="container">
+      <h1>Support & Contact</h1>
+      
+      <section class="support-section">
+        <h2>Dana: Generosity as Practice</h2>
+        <p>
+          In Buddhist tradition, <strong>dana</strong> (generosity) is the first of the paramitas—the perfections that lead to awakening. It's not about transaction or obligation, but about the practice of giving freely, receiving gratefully, and recognizing our interdependence.
+        </p>
+        <p>
+          All content on Situated Laboratories is freely available. There are no paywalls, no memberships, no required donations. If the practices, essays, or study guides here have been helpful, and if you're able, your generosity helps sustain this work.
+        </p>
+        <p>
+          Your support goes directly to maintaining the site, creating new content, and keeping everything accessible to anyone who needs it, regardless of their ability to give.
+        </p>
+      </section>
+      
+      <section class="support-section">
+        <h2>How to Support</h2>
+        <div class="venmo-section">
+          <div class="venmo-info">
+            <p>
+              You can support this work through Venmo:
+            </p>
+            <p class="venmo-handle">
+              <strong>@Richard-Donohue</strong>
+            </p>
+            <p>
+              Scan the QR code with your Venmo app, or search for <strong>@Richard-Donohue</strong> in the app.
+            </p>
+          </div>
+          <div class="venmo-image">
+            <img src="/images/venmo.jpg" alt="Venmo QR code for @Richard-Donohue" />
+          </div>
+        </div>
+      </section>
+      
+      <section class="support-section">
+        <h2>Contact</h2>
+        <p>
+          For questions, feedback, or to share how these practices have been helpful, you can reach out through Venmo or find me on the trails around Durango, Colorado.
+        </p>
+      </section>
+      
+      <section class="support-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <h3>Do I need to donate to access content?</h3>
+          <p>
+            No. Everything on this site is freely available. Dana is entirely optional and based on your capacity and desire to support the work.
+          </p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What does my donation support?</h3>
+          <p>
+            Your generosity helps cover hosting costs, domain registration, and the time it takes to create new content—essays, practices, and study guides. It also helps keep everything accessible to anyone who needs it.
+          </p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Is this tax-deductible?</h3>
+          <p>
+            No, this is not a registered nonprofit. Your support is a personal gift, not a tax-deductible donation.
+          </p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can I request specific content or practices?</h3>
+          <p>
+            Absolutely. If there's a practice, topic, or question you'd like to see addressed, feel free to reach out. This is a collaborative laboratory.
+          </p>
+        </div>
+      </section>
+      
+      <section class="support-section">
+        <h2>Crisis Resources</h2>
+        <p>
+          If you are in immediate distress, please contact local emergency services or a crisis resource.
+        </p>
+        <p>
+          <strong>U.S.:</strong> Call or text <a href="tel:988">988</a> for the <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer">Suicide & Crisis Lifeline</a>.
+        </p>
+      </section>
+    </div>
   </article>
 </BaseLayout>
+
+<style>
+  .support-page {
+    padding: var(--space-2xl) 0;
+  }
+
+  .support-page .container {
+    max-width: 700px;
+  }
+
+  .support-page h1 {
+    margin-bottom: var(--space-xl);
+  }
+
+  .support-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .support-section h2 {
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+  }
+
+  .support-section h3 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    font-size: 1.2rem;
+  }
+
+  .support-section p {
+    margin-bottom: var(--space-md);
+    line-height: 1.8;
+  }
+
+  .support-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .venmo-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+    margin-top: var(--space-lg);
+  }
+
+  .venmo-info {
+    order: 2;
+  }
+
+  .venmo-handle {
+    font-size: 1.2rem;
+    margin: var(--space-md) 0;
+  }
+
+  .venmo-image {
+    order: 1;
+    text-align: center;
+  }
+
+  .venmo-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(21, 21, 21, 0.12);
+  }
+
+  .faq-item {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .faq-item h3 {
+    margin-top: 0;
+  }
+
+  /* Desktop: side-by-side for Venmo */
+  @media (min-width: 600px) {
+    .venmo-section {
+      grid-template-columns: 1fr 300px;
+      align-items: center;
+    }
+
+    .venmo-info {
+      order: 1;
+    }
+
+    .venmo-image {
+      order: 2;
+    }
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .support-page {
+      padding: var(--space-xl) 0;
+    }
+  }
+</style>
