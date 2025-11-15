@@ -1,0 +1,17 @@
+<!-- contour-hero.svg - Hero background pattern -->
+<!-- Topographic contour lines, faint/low-contrast -->
+<!-- Keep under 5KB, monochrome -->
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Faint contour lines - adjust opacity for subtle background effect -->
+  <g opacity="0.15" stroke="#151515" stroke-width="1" fill="none">
+    <!-- Horizontal contour lines suggesting elevation -->
+    <path d="M0,150 Q100,140 200,150 T400,150" />
+    <path d="M0,120 Q100,110 200,120 T400,120" />
+    <path d="M0,180 Q100,170 200,180 T400,180" />
+    <path d="M0,90 Q100,80 200,90 T400,90" />
+    <path d="M0,210 Q100,200 200,210 T400,210" />
+    <!-- Vertical accent lines -->
+    <path d="M100,0 Q100,50 100,150 Q100,250 100,300" />
+    <path d="M300,0 Q300,50 300,150 Q300,250 300,300" />
+  </g>
+</svg>

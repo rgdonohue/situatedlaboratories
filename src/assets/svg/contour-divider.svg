@@ -1,0 +1,10 @@
+<!-- contour-divider.svg - Horizontal section divider -->
+<!-- Single contour line, subtle -->
+<svg width="1200" height="2" viewBox="0 0 1200 2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Single horizontal contour line -->
+  <path d="M0,1 Q300,0.5 600,1 T1200,1" 
+        stroke="#D0C5B6" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.6" />
+</svg>

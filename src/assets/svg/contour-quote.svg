@@ -1,0 +1,9 @@
+<!-- contour-quote.svg - Vertical accent for quote blocks -->
+<!-- Rust color (#B35632), vertical contour line -->
+<svg width="3" height="120" viewBox="0 0 3 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Vertical contour line in rust color -->
+  <path d="M1.5,0 Q1.5,30 1.5,60 Q1.5,90 1.5,120" 
+        stroke="#B35632" 
+        stroke-width="3" 
+        fill="none" />
+</svg>
