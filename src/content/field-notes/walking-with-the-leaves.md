@@ -6,7 +6,7 @@ tags: ["dharma", "practice", "impermanence", "climate"]
 featured: true
 ---
 
-I found a honeycomb on the trail today. Not in a tree, but on the ground, fallen. The hexagonal cells were empty, the wax structure still intact but abandoned. I knelt down to look at it, this perfect architecture that had been built, used, and then left behind. The bees were gone. The honey was gone. Only the form remained, sitting there on the dirt path like a question.
+We found a honeycomb on the trail today. Not in a tree, but on the ground, fallen. The hexagonal cells were empty, the wax structure still intact but abandoned. I knelt down to look at it, this perfect architecture that had been built, used, and then left behind. The bees were gone. The honey was gone. Only the form remained, sitting there on the dirt path like a question.
 
 <img src="/images/field-notes/honeycomb.jpg" alt="A fallen bee honeycomb on a trail" />
 
