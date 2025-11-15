@@ -13,6 +13,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="about-content">
         <div class="about-image">
           <img src="/images/richard.jpg" alt="Richard Donohue hiking in the mountains" />
+          <img src="/images/richard-yoga.jpg" alt="Richard Donohue practicing yoga" />
         </div>
         
         <div class="about-text">
@@ -94,6 +95,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: var(--space-xl);
   }
 
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
   .about-image img {
     width: 100%;
     max-width: 500px;
@@ -102,6 +109,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     box-shadow: 0 4px 12px rgba(21, 21, 21, 0.12);
     margin: 0 auto;
     display: block;
+  }
+
+  /* Desktop: horizontal layout for images */
+  @media (min-width: 900px) {
+    .about-image {
+      flex-direction: row;
+      gap: var(--space-md);
+    }
+
+    .about-image img {
+      max-width: none;
+      flex: 1;
+    }
   }
 
   .about-text h2 {
@@ -137,13 +157,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* Desktop: side-by-side layout */
   @media (min-width: 900px) {
     .about-content {
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: 600px 1fr;
       gap: var(--space-2xl);
     }
 
-    .about-image img {
+    .about-image {
       position: sticky;
       top: var(--space-xl);
+      align-self: start;
     }
   }
 
