@@ -44,9 +44,6 @@ const { Content } = await note.render();
         )}
       </div>
       <h1>{note.data.title}</h1>
-      <p style="font-size: 1.1rem; color: var(--color-ink-secondary); margin-top: var(--space-sm);">
-        {note.data.description}
-      </p>
     </header>
     
     <div class="content">
@@ -86,5 +83,12 @@ const { Content } = await note.render();
 
   .content li {
     margin-bottom: var(--space-xs);
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+    margin: var(--space-xl) 0;
+    border-radius: 4px;
   }
 </style>

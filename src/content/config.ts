@@ -11,6 +11,7 @@ const fieldNotes = defineCollection({
     // Optional: for future image support
     image: z.string().optional(),
   }),
+  // Allow HTML in markdown to use img tags for public folder images
 });
 
 const practices = defineCollection({
