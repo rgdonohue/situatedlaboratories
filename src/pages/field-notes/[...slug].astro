@@ -23,40 +23,87 @@ const { Content } = await note.render();
   title={note.data.title} 
   description={note.data.description}
 >
-  <article class="container" style="padding: var(--space-2xl) 0; max-width: 700px;">
-    <header style="margin-bottom: var(--space-xl);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-sm); flex-wrap: wrap; gap: var(--space-sm);">
-        <time datetime={note.data.pubDate.toISOString()} style="font-size: 0.9rem; color: var(--color-ink-secondary);">
-          {note.data.pubDate.toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          })}
-        </time>
-        {note.data.tags && note.data.tags.length > 0 && (
-          <div style="display: flex; gap: var(--space-xs); flex-wrap: wrap;">
-            {note.data.tags.map((tag) => (
-              <span style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: var(--color-paper-dark); color: var(--color-ink-secondary); border-radius: 4px;">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
+  <article class="post-article">
+    <div class="container">
+      <header class="post-header">
+        <div class="post-meta">
+          <time datetime={note.data.pubDate.toISOString()}>
+            {note.data.pubDate.toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </time>
+          {note.data.tags && note.data.tags.length > 0 && (
+            <div class="post-tags">
+              {note.data.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
+        <h1>{note.data.title}</h1>
+      </header>
+      
+      <div class="content">
+        <Content />
       </div>
-      <h1>{note.data.title}</h1>
-    </header>
-    
-    <div class="content">
-      <Content />
+      
+      <footer class="post-footer">
+        <a href="/field-notes">← Back to Field Notes</a>
+      </footer>
     </div>
-    
-    <footer style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
-      <a href="/field-notes">← Back to Field Notes</a>
-    </footer>
   </article>
 </BaseLayout>
 
 <style>
+  .post-article {
+    padding: var(--space-2xl) 0;
+  }
+
+  .post-article .container {
+    max-width: 700px;
+  }
+
+  .post-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .post-meta time {
+    font-size: 0.9rem;
+    color: var(--color-ink-secondary);
+  }
+
+  .post-tags {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-paper-dark);
+    color: var(--color-ink-secondary);
+    border-radius: 4px;
+  }
+
+  .post-footer {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Content styles */
   .content {
     line-height: 1.8;
   }
@@ -87,8 +134,22 @@ const { Content } = await note.render();
 
   .content img {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: var(--space-xl) 0;
-    border-radius: 4px;
+    margin: var(--space-2xl) 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(21, 21, 21, 0.12);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .post-article {
+      padding: var(--space-xl) 0;
+    }
+
+    .content img {
+      margin: var(--space-xl) 0;
+      border-radius: 6px;
+    }
   }
 </style>
