@@ -1,0 +1,147 @@
+---
+// CrisisFooter.astro - from DESIGN_PLAN.md
+// Always visible, dark theme, includes crisis resources
+---
+
+<footer class="crisis-footer" data-theme="dark">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-heading">Situated Laboratories</h3>
+        <p class="footer-tagline">Yoga, dharma & social justice practice for difficult times.</p>
+      </div>
+
+      <nav class="footer-section" aria-label="Footer navigation">
+        <h4 class="footer-subheading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="/field-notes">Field Notes</a></li>
+          <li><a href="/practice-lab">Practice Lab</a></li>
+          <li><a href="/study">Study</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/support">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-section footer-crisis">
+        <h4 class="footer-subheading">Crisis & Support</h4>
+        <p class="crisis-text">
+          If you are in immediate distress, please contact local emergency services or a crisis resource.
+        </p>
+        <p class="crisis-lifeline">
+          <strong>U.S.:</strong> Call or text <a href="tel:988">988</a> for the <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer">Suicide & Crisis Lifeline</a>.
+        </p>
+        <p>
+          <a href="/support">More resources →</a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-subheading">Legal</h4>
+        <p class="footer-copyright">© 2025 Richard Donohue</p>
+        <p class="footer-privacy">
+          This site uses privacy-respecting analytics (or no analytics).
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .crisis-footer {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    padding: var(--space-2xl) 0 var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .footer-heading {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--color-paper);
+  }
+
+  .footer-subheading {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--color-paper);
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-links a,
+  .crisis-footer a {
+    color: var(--color-paper);
+    text-decoration: underline;
+  }
+
+  .footer-links a:hover,
+  .crisis-footer a:hover {
+    color: var(--color-teal-light);
+  }
+
+  .footer-crisis {
+    border-left: 2px solid var(--color-rust);
+    padding-left: var(--space-md);
+  }
+
+  .crisis-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .crisis-lifeline {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-copyright,
+  .footer-privacy {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+  }
+
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-crisis {
+      border-left: none;
+      border-top: 2px solid var(--color-rust);
+      padding-left: 0;
+      padding-top: var(--space-md);
+    }
+  }
+</style>

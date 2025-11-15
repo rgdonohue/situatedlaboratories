@@ -1,0 +1,162 @@
+---
+// AudioPlayer.astro - from PLAN.md + DESIGN_PLAN.md
+// Requirements: transcript display, keyboard controls, no autoplay, duration display
+
+interface Props {
+  src: string;
+  title: string;
+  transcript: string;
+  duration?: string;
+}
+
+const { src, title, transcript, duration } = Astro.props;
+const audioId = `audio-${Math.random().toString(36).substr(2, 9)}`;
+const transcriptId = `transcript-${audioId}`;
+---
+
+<div class="audio-player">
+  <div class="audio-header">
+    <h3 class="audio-title">{title}</h3>
+    {duration && <span class="audio-duration">{duration}</span>}
+  </div>
+  
+  <audio
+    id={audioId}
+    controls
+    preload="metadata"
+    class="audio-element"
+    aria-label={`Audio player for ${title}`}
+  >
+    <source src={src} type="audio/mpeg" />
+    <source src={src.replace('.mp3', '.ogg')} type="audio/ogg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <details class="transcript-details">
+    <summary class="transcript-toggle">
+      <span>Show transcript</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </summary>
+    <div class="transcript-content" id={transcriptId}>
+      <div class="transcript-text" set:html={transcript} />
+    </div>
+  </details>
+</div>
+
+<style>
+  .audio-player {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-md);
+    background: var(--color-paper);
+  }
+
+  .audio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .audio-title {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+  }
+
+  .audio-duration {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-ink-secondary);
+    white-space: nowrap;
+  }
+
+  .audio-element {
+    width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+
+  .transcript-details {
+    margin-top: var(--space-md);
+  }
+
+  .transcript-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-teal);
+    padding: var(--space-sm) 0;
+    list-style: none;
+    user-select: none;
+  }
+
+  .transcript-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .transcript-toggle svg {
+    transition: transform var(--transition-base);
+  }
+
+  .transcript-details[open] .transcript-toggle svg {
+    transform: rotate(180deg);
+  }
+
+  .transcript-content {
+    padding: var(--space-md);
+    background: var(--color-paper-dark);
+    border-radius: 4px;
+    margin-top: var(--space-sm);
+  }
+
+  .transcript-text {
+    line-height: 1.7;
+    color: var(--color-ink);
+  }
+
+  .transcript-text p {
+    margin-bottom: var(--space-sm);
+  }
+</style>
+
+<script>
+  // Keyboard controls for audio player
+  document.addEventListener('DOMContentLoaded', () => {
+    const audioElements = document.querySelectorAll('.audio-element');
+    
+    audioElements.forEach((audio) => {
+      // Spacebar to play/pause (when audio has focus)
+      audio.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && document.activeElement === audio) {
+          e.preventDefault();
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
+        }
+      });
+
+      // Arrow keys for seeking (when audio has focus)
+      audio.addEventListener('keydown', (e) => {
+        if (document.activeElement === audio) {
+          if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+          } else if (e.code === 'ArrowRight') {
+            e.preventDefault();
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+          }
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,159 @@
+---
+// Header.astro - from DESIGN_PLAN.md
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-brand">
+        <a href="/" class="brand-link">
+          <span class="brand-name">Situated Laboratories</span>
+          <span class="brand-tagline">Yoga · Dharma · Social Justice</span>
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/field-notes">Field Notes</a></li>
+        <li><a href="/practice-lab">Practice Lab</a></li>
+        <li><a href="/study">Study</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/support">Support</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background-color: rgba(247, 243, 236, 0.95);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) 0;
+  }
+
+  .brand-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .brand-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+
+  .brand-tagline {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--color-ink-secondary);
+    font-weight: 500;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-ink);
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-ink);
+    position: absolute;
+    transition: var(--transition-base);
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    bottom: -8px;
+  }
+
+  /* Mobile nav - slide-down panel */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-paper);
+      border-bottom: 1px solid var(--color-border);
+      flex-direction: column;
+      padding: var(--space-md);
+      gap: var(--space-sm);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: var(--transition-base);
+      pointer-events: none;
+    }
+
+    .nav-links[aria-expanded="true"] {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-toggle {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  // Mobile nav toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !isExpanded);
+        navLinks.setAttribute('aria-expanded', !isExpanded);
+      });
+    }
+  });
+</script>
