@@ -2,6 +2,14 @@
   command = "npm run build"
   publish = "dist"
 
+# Redirect .net to .org if .net is added as domain alias
+[[redirects]]
+  from = "https://situatedlaboratories.net/*"
+  to = "https://situatedlaboratories.org/:splat"
+  status = 301
+  force = true
+
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
