@@ -9,12 +9,6 @@
   status = 301
   force = true
 
-# SPA fallback
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # Cache headers for static assets
 [[headers]]
   for = "/audio/*"
