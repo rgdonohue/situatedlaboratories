@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import type { APIContext } from 'astro';
 
 export async function GET(context: APIContext) {
-  const fieldNotes = await getCollection('field-notes').catch(() => []);
+  const fieldNotes = await getCollection('field-notes', ({ data }) => {
+    return !data.draft;
+  }).catch(() => []);
   const sortedNotes = fieldNotes.sort((a, b) => 
     b.data.pubDate.getTime() - a.data.pubDate.getTime()
   );

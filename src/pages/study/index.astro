@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const studyMaterials = await getCollection('study').catch(() => []);
+const studyMaterials = await getCollection('study', ({ data }) => {
+  return !data.draft;
+}).catch(() => []);
 const sortedStudy = studyMaterials.sort((a, b) => {
   const orderA = a.data.order ?? 999;
   const orderB = b.data.order ?? 999;

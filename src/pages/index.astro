@@ -5,8 +5,12 @@ import { getCollection } from 'astro:content';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 
 // Get featured content
-const fieldNotes = await getCollection('field-notes').catch(() => []);
-const practices = await getCollection('practices').catch(() => []);
+const fieldNotes = await getCollection('field-notes', ({ data }) => {
+  return !data.draft;
+}).catch(() => []);
+const practices = await getCollection('practices', ({ data }) => {
+  return !data.draft;
+}).catch(() => []);
 
 const featuredEssay = fieldNotes
   .filter(note => note.data.featured)

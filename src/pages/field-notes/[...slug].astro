@@ -4,7 +4,9 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const fieldNotes = await getCollection('field-notes');
+  const fieldNotes = await getCollection('field-notes', ({ data }) => {
+    return !data.draft;
+  });
   return fieldNotes.map((note) => ({
     params: { slug: note.slug },
     props: { note },
@@ -120,6 +122,13 @@ const { Content } = await note.render();
 
   :global(.post-article .content p) {
     margin-bottom: var(--space-md);
+  }
+
+  :global(.post-article .content hr) {
+    width: 60%;
+    margin: var(--space-xl) auto;
+    border: none;
+    border-top: 1px solid var(--color-border);
   }
 
   :global(.post-article .content ul),

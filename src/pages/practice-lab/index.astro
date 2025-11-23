@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const practices = await getCollection('practices').catch(() => []);
+const practices = await getCollection('practices', ({ data }) => {
+  return !data.draft;
+}).catch(() => []);
 const sortedPractices = practices.sort((a, b) => 
   b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );

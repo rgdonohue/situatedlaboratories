@@ -8,6 +8,7 @@ const fieldNotes = defineCollection({
     pubDate: z.date(),
     tags: z.array(z.string()).optional(),
     featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
     // Optional: for future image support
     image: z.string().optional(),
   }),
@@ -24,6 +25,7 @@ const practices = defineCollection({
     duration: z.string(), // Format: "5:12"
     pubDate: z.date(),
     featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
   }),
 });
 
@@ -34,6 +36,7 @@ const study = defineCollection({
     description: z.string(),
     category: z.enum(['dharma', 'yoga', 'ethics']),
     order: z.number().optional(), // For ordering study materials
+    draft: z.boolean().default(false),
   }),
 });
 

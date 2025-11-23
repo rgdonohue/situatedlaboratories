@@ -4,7 +4,9 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const studyMaterials = await getCollection('study');
+  const studyMaterials = await getCollection('study', ({ data }) => {
+    return !data.draft;
+  });
   return studyMaterials.map((item) => ({
     params: { slug: item.slug },
     props: { item },
